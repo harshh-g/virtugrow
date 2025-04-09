@@ -49,10 +49,10 @@ const ServicesSection = () => {
               key={index} 
               className="bg-gray-800/70 hover:bg-gray-800 p-6 rounded-lg transition-transform duration-300 hover:-translate-y-1"
             >
-              <div className="flex items-center justify-center w-12 h-12 bg-cyan-900/30 rounded-full mb-6">
+              <div className="flex mx-auto items-center justify-center w-12 h-12 bg-cyan-900/30 rounded-full mb-6">
                 {service.icon}
               </div>
-              <h3 className="text-xl font-bold text-white mb-3">{service.title}</h3>
+              <h3 className="text-xl font-bold flex justify-center text-white mb-3">{service.title}</h3>
               <p className="text-gray-400">{service.description}</p>
             </div>
           ))}

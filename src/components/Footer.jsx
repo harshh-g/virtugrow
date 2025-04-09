@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import b3 from '../assets/Bottom.png'
 
 
 const Footer = () => {
@@ -52,9 +53,8 @@ const Footer = () => {
               <li><a href="#" className="text-gray-400 hover:text-cyan-400 transition-colors flex items-center"> Pinterest</a></li>
             </ul>
           </div> 
-          <p className="text-gray-500 text-sm mb-4 md:mb-0">Copyright ©VirtuGrow Digital 2025. All Rights Reserved</p>
-          <div className="text-cyan-500 text-3xl font-bold">VirtuGrow</div>
         </div>
+          <img src={b3} className='flex justify-center'></img>
       </div>
     </footer>
   );

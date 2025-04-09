@@ -9,15 +9,13 @@ const BrandsSection = () => {
 
   return (
     <section className="py-12 border-y border-gray-800">
-      <div className="container mx-auto px-4">
-        <h3 className="text-center text-cyan-500 text-lg font-medium mb-10">Brands we have worked with</h3>
-        <div className="flex flex-wrap justify-center md:justify-between items-center gap-8 md:gap-0">
+      <div className="container  px-4">
+        <div className="flex justify-center  items-center  md:gap-0">
           {brands2.map((brand, index) => (
             <div key={index} className="group">
               <img 
                 src={brand.logo} 
-                
-                className=" grayscale opacity-70 group-hover:grayscale-0 group-hover:opacity-100 transition-all duration-300"
+                className=" grayscale  opacity-70 group-hover:grayscale-0 group-hover:opacity-100 transition-all duration-300"
               />
             </div>
           ))}

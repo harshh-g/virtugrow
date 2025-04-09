@@ -1,36 +1,10 @@
 import React from 'react';
+import b2 from '../assets/Frame.png'
 
 const PortfolioSection = () => {
   const projects = [
     {
-      image: '/api/placeholder/400/300',
-      title: 'Project Name Here',
-      description: 'Small description'
-    },
-    {
-      image: '/api/placeholder/400/300',
-      title: 'Project Name Here',
-      description: 'Small description'
-    },
-    {
-      image: '/api/placeholder/400/300',
-      title: 'Project Name Here',
-      description: 'Small description'
-    },
-    {
-      image: '/api/placeholder/400/300',
-      title: 'Project Name Here',
-      description: 'Small description'
-    },
-    {
-      image: '/api/placeholder/400/300',
-      title: 'Project Name Here',
-      description: 'Small description'
-    },
-    {
-      image: '/api/placeholder/400/300',
-      title: 'Project Name Here',
-      description: 'Small description'
+      image:b2
     }
   ];
 
@@ -42,17 +16,16 @@ const PortfolioSection = () => {
           <h2 className="text-3xl md:text-4xl font-bold text-white">Work That Speaks</h2>
         </div>
         
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div className="w-full h-full">
           {projects.map((project, index) => (
             <div key={index} className="relative group overflow-hidden rounded-lg">
               <img 
                 src={project.image} 
-                alt={project.title}
-                className="w-full h-64 object-cover transition-transform duration-500 group-hover:scale-110"
+                
+                className="w-full h-full object-cover transition-transform duration-500 "
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-6">
-                <h3 className="text-xl font-bold text-white">{project.title}</h3>
-                <p className="text-gray-300 text-sm">{project.description}</p>
+                
               </div>
             </div>
           ))}
