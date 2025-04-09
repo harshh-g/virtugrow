@@ -1,6 +1,3 @@
-// Frontend structure for VirtuGrow Digital website
-// Main App.jsx component
-
 import React, { useState } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Navbar from './components/Navbar';
