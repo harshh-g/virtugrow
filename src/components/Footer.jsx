@@ -51,7 +51,7 @@ const Footer = () => {
               <li><a href="#" className="text-gray-400 hover:text-cyan-400 transition-colors flex items-center">YouTube</a></li>
               <li><a href="#" className="text-gray-400 hover:text-cyan-400 transition-colors flex items-center"> Pinterest</a></li>
             </ul>
-          </div> className="border-t border-gray-800 pt-6 flex flex-col md:flex-row justify-between items-center"
+          </div> 
           <p className="text-gray-500 text-sm mb-4 md:mb-0">Copyright ©VirtuGrow Digital 2025. All Rights Reserved</p>
           <div className="text-cyan-500 text-3xl font-bold">VirtuGrow</div>
         </div>
