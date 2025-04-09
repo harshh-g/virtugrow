@@ -25,7 +25,7 @@ function App() {
             } />
             {/* Add additional routes as needed */}
           </Routes>
-          <Footer />
+          
         </div>
       </div>
     </Router>
