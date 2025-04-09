@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { MoonIcon, SunIcon } from 'lucide-react';
+import logo from '../assets/logo.png'
 
 const Navbar = ({ darkMode, setDarkMode }) => {
   const [scrolled, setScrolled] = useState(false);
@@ -24,9 +25,7 @@ const Navbar = ({ darkMode, setDarkMode }) => {
       <div className="flex items-center">
         <Link to="/" className="flex items-center">
           <div className="text-cyan-400 text-2xl font-bold">
-            <svg className="w-8 h-8" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M16 4L28 16L16 28L4 16L16 4Z" fill="#07ABB6"/>
-            </svg>
+            <img src={logo} className='w-16 h-20' alt="" />
           </div>
         </Link>
       </div>
