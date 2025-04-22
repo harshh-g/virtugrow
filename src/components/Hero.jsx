@@ -55,7 +55,7 @@ const Hero = () => {
       {/* Footer */}
       <footer className="hero-footer flex items-center
 w-full justify-between  ">
-        <span className='pl-5'>Since-Y: 2024</span>
+        <span className='pl-5 w-[329px] algin-left'>Since-Y: 2024</span>
         <span> <MouseIcon size={30} /></span>
         <span className='pr-5'>1/74, Vivek Khand 2, Gomti Nagar, Lucknow</span>
       </footer>
