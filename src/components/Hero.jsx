@@ -1,16 +1,22 @@
 import React, { useEffect, useRef } from 'react';
-import { ArrowRightCircle , MouseIcon } from 'lucide-react';
+import { ArrowRightCircle, MouseIcon } from 'lucide-react';
 import bg from '../assets/Bg.png';
 import video from '../assets/banner.mp4';
-import './Hero.css'; // optional, for cleaner styles
+import './Hero.css';
 
 const Hero = () => {
   const titleRef = useRef(null);
   const subtitleRef = useRef(null);
+  const videoRef = useRef(null);
 
   useEffect(() => {
     const title = titleRef.current;
     const subtitle = subtitleRef.current;
+
+    // 🎥 Set playback speed slightly faster
+    if (videoRef.current) {
+      videoRef.current.playbackRate = 0.75;
+    }
 
     if (title && subtitle) {
       title.style.opacity = '0';
@@ -35,7 +41,7 @@ const Hero = () => {
   return (
     <section className="hero-container">
       {/* Background Video */}
-      <video className="hero-video" autoPlay muted loop>
+      <video className="hero-video" autoPlay muted loop ref={videoRef}>
         <source src={video} type="video/mp4" />
         Your browser does not support the video tag.
       </video>
@@ -43,24 +49,37 @@ const Hero = () => {
       {/* Image Overlay */}
       <img src={bg} alt="Overlay" className="hero-overlay" />
 
+      {/* Dark Gradient Overlay */}
+      <div className="hero-dark-overlay" />
+
       {/* Main Content */}
       <div className="hero-content">
-        <h1 ref={titleRef} className='text-9xl leading-32'>Grow Digitally</h1>
-        <h2 ref={subtitleRef} className='text-9xl leading-32' >Scale Effortlessly</h2>
+        <h1 ref={titleRef} className="text-9xl leading-32">
+          Grow Digitally
+        </h1>
+        <h2 ref={subtitleRef} className="text-9xl leading-32">
+          Scale Effortlessly
+        </h2>
         <button className="contact-btn">
           Contact Us <ArrowRightCircle size={20} />
         </button>
       </div>
 
       {/* Footer */}
-      <footer className="hero-footer flex items-center
-w-full justify-between  ">
-        <span className='pl-5 w-[329px] algin-left'>Since-Y: 2024</span>
-        <span> <MouseIcon size={30} /></span>
-        <span className='pr-5'>1/74, Vivek Khand 2, Gomti Nagar, Lucknow</span>
+      <footer className="hero-footer flex items-center w-full justify-between">
+        <span className="pl-5 w-[329px]">Since-Y: 2024</span>
+        <span>
+          <MouseIcon size={30} />
+        </span>
+        <span className="pr-5">1/74, Vivek Khand 2, Gomti Nagar, Lucknow</span>
       </footer>
     </section>
   );
 };
 
 export default Hero;
+
+
+
+
+
