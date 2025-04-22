@@ -1,25 +1,47 @@
-import React from 'react';
-import brands from '../assets/Brands.png'
+import React from "react";
+import ava from '../assets/clients/avalogo.png';
+import AuSmallFin from '../assets/clients/AuSmallFin.png';
+import healthism from '../assets/clients/healthism.png';
+import ludhiyanalogo from '../assets/clients/ludhiyanaHome.png';
+import megalogo from '../assets/clients/megaHandloom.png';
+import comfortHome from '../assets/clients/comfortlogo.png';
+import cngCare from '../assets/clients/cng.png';
+import yesBank from '../assets/clients/Yesbank.png';
+import phoneMytra from '../assets/clients/phoneMytra.png';
+
+
+
+
+
+
+const brands = [
+  { name: 'AVA', logo: ava },
+  { name: 'AU Small Finance Bank', logo: AuSmallFin },
+  { name: 'Healthism', logo: healthism },
+  { name: 'Ludhiyana Home', logo: ludhiyanalogo },
+  { name: 'Mega Handloom', logo: megalogo },
+  { name: 'Comfort Home', logo: comfortHome },
+  { name: 'CNG Care', logo: cngCare },
+  { name: 'Yes Bank', logo: yesBank },
+  { name: 'Phone Mytra', logo: phoneMytra },
+];
 
 const BrandsSection = () => {
-  const brands2 = [
-    { logo: brands },
-    
-  ];
-
   return (
-    <section className="py-12 border-y border-gray-800">
-      <div className="container  px-4">
-        <div className="flex justify-center  items-center  md:gap-0">
-          {brands2.map((brand, index) => (
-            <div key={index} className="group">
-              <img 
-                src={brand.logo} 
-                className=" grayscale  opacity-70 group-hover:grayscale-0 group-hover:opacity-100 transition-all duration-300"
-              />
-            </div>
-          ))}
-        </div>
+    <section className="py-12 bg-white text-center">
+      <h2 className="m2">
+        Brands we have worked with
+      </h2>
+      <div className="flex justify-center items-center gap-12 flex-wrap px-4">
+        {brands.map((brand, index) => (
+          <div key={index} className="transition-all duration-300">
+            <img
+              src={brand.logo}
+              alt={brand.name}
+              className="h-24 filter  transition duration-300 ease-in-out"
+            />
+          </div>
+        ))}
       </div>
     </section>
   );

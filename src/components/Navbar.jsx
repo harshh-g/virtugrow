@@ -9,7 +9,7 @@ const Navbar = () => {
 
   return (
     <>
-    <header className={`fixed top-5 left-1/2 transform -translate-x-1/2 z-50 transition-all duration-300 w-[580px] h-[72px]  bg-black/40 backdrop/blur-sm rounded-full px-8 py-5 flex justify-between items-center`}>
+    <header className={`fixed top-5 left-1/2 transform -translate-x-1/2 z-50 transition-all duration-300 w-[580px] h-[72px]  bg-black/40 backdrop-blur-2xl rounded-full px-8 py-5 flex justify-between items-center`}>
       <div className="flex items-center">
         <Link to="/" className="flex items-center"><img src={logo} className='w-14 h-16 ' alt="" /></Link>
       </div>
