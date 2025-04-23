@@ -3,7 +3,7 @@ import boardroomImg from '../assets/meeting.png'; // Replace with your actual im
 
 const StorySection = () => {
   return (
-    <section className="bg-[#0d1128]">
+    <section className=" w-[90%] mx-auto">
       {/* Image */}
       <img src={boardroomImg} alt="Boardroom" className="w-full object-contain" />
 
@@ -25,8 +25,8 @@ const StorySection = () => {
   </div>
 
   {/* Right: Description */}
-  <div className="md:col-span-2 flex  justify-around">
-    <p className="text-base m3  leading-relaxed text-gray-700 tracking-tighter">
+  <div className="md:col-span-2 flex  justify-end">
+    <p className="text-base m3  leading-96 text-gray-700 tracking-widest">
       Hi, we’re <span className="font-semibold text-gray-900">Virtugrow Digital 🚀</span>. 
       We craft digital solutions
       to grow your brand. From web development to UX/UI
