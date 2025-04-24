@@ -1,4 +1,5 @@
 import React from 'react';
+import { motion } from 'framer-motion';
 
 const portfolioItems = [
   {
@@ -41,29 +42,42 @@ const portfolioItems = [
 
 const Portfolio = () => {
   return (
-    <section className="w-full px-4 py-16 bg-black text-white">
+    <section className="w-full px-4 py-20 bg-gradient-to-br from-[#0f1117] via-[#0c0e13] to-[#1b1e29] text-white relative overflow-hidden">
       <div className="max-w-7xl mx-auto">
-        <div className="text-center mb-12">
+        <motion.div
+          className="text-center mb-16"
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, ease: 'easeOut' }}
+          viewport={{ once: true }}
+        >
           <p className="text-cyan-400 text-lg font-medium">Our Portfolio</p>
           <h2 className="text-4xl sm:text-5xl font-bold mt-2">Work That Speaks</h2>
-        </div>
+        </motion.div>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10">
-          {portfolioItems.map((project) => (
-            <div
+          {portfolioItems.map((project, i) => (
+            <motion.div
               key={project.id}
-              className="bg-white rounded-xl overflow-hidden shadow-xl transform transition duration-300 hover:scale-105"
+              className="bg-white rounded-2xl overflow-hidden shadow-lg group relative transition-transform"
+              whileHover={{ scale: 1.05 }}
+              initial={{ opacity: 0, y: 50 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: i * 0.1 }}
+              viewport={{ once: true }}
             >
-              <img
-                src={project.imgUrl}
-                alt={project.title}
-                className="w-full h-60 object-cover"
-              />
+              <div className="overflow-hidden">
+                <img
+                  src={project.imgUrl}
+                  alt={project.title}
+                  className="w-full h-60 object-cover transition-transform duration-500 group-hover:scale-110"
+                />
+              </div>
               <div className="p-4">
                 <h3 className="text-black font-semibold text-lg mb-1">{project.title}</h3>
                 <p className="text-zinc-700 text-sm">{project.description}</p>
               </div>
-            </div>
+            </motion.div>
           ))}
         </div>
       </div>
