@@ -65,7 +65,7 @@ const Hero = () => {
         <button className="contact-btn">
           <span className="btn-text">Contact Us</span>
           <span className="arrow-container">
-            <ArrowRightCircle size={30} className="arrow-icon" />
+            <ArrowRightCircle size={20} className="arrow-icon" />
           </span>
         </button>
       </div>

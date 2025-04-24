@@ -25,7 +25,7 @@ const brands = [
 
 const BrandsSection = () => {
   return (
-    <section className="brands-section" style={{ padding: '2rem 0', backgroundColor: '#f9f9f9' }}>
+    <section className="brands-section" style={{ padding: '6rem 0', backgroundColor: '#f9f9f9' }}>
       <h2 className="lg:text-3xl sm:text-xl md:text-2xl font-bold" style={{
     textAlign: 'center',
     marginBottom: '3rem',
