@@ -83,12 +83,58 @@
   transition: background 0.3s ease;
   font-family: "Poppins", sans-serif;
   font-weight: 500;
+  position: relative;
+  overflow: hidden;
+}
+
+.arrow-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  transition: transform 0.3s ease;
+}
+
+.arrow-icon {
+  stroke: black;
+  transition: stroke 0.3s ease, transform 0.3s ease;
 }
 
 .contact-btn:hover {
   background: #318cd6;
   color: white;
 }
+
+.contact-btn:hover .arrow-icon {
+  stroke: black;
+  transform: translateX(4px);
+}
+
+/* For a more advanced effect with fill transition */
+.arrow-icon {
+  position: relative;
+  stroke-dasharray: 60;
+  stroke-dashoffset: 60;
+  transition: stroke 0.3s ease, transform 0.3s ease, stroke-dashoffset 0.6s ease;
+  fill: transparent;
+}
+
+.contact-btn:hover .arrow-icon {
+  stroke-dashoffset: 0;
+  fill: transparent;
+  animation: slideRight 0.3s ease forwards;
+}
+
+@keyframes slideRight {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(4px);
+  }
+}
+
+
 
 .hero-footer {
   position: absolute;
@@ -101,11 +147,14 @@
   justify-content: space-between;
   width: 100%;
   padding: 0 2rem;
+  margin: auto;
 }
 
 .footer-year {
   text-align: left;
   font-size: 1rem;
+  width: 342px;
+  
 }
 
 .footer-icon {
@@ -140,11 +189,20 @@
   
   .hero-footer {
     padding: 0 1.5rem;
+    margin: auto;
+    width: 100%;
   }
   
   .footer-year,
   .footer-address {
     font-size: 0.9rem;
+  }
+
+  .footer-year {
+    text-align: left;
+    font-size: 1rem;
+    
+    
   }
 }
 

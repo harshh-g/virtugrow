@@ -1,4 +1,6 @@
 import React from "react";
+import Marquee from "react-fast-marquee";
+
 import ava from '../assets/clients/avalogo.png';
 import AuSmallFin from '../assets/clients/AuSmallFin.png';
 import healthism from '../assets/clients/healthism.png';
@@ -8,7 +10,6 @@ import comfortHome from '../assets/clients/comfortlogo.png';
 import cngCare from '../assets/clients/cng.png';
 import yesBank from '../assets/clients/Yesbank.png';
 import phoneMytra from '../assets/clients/phoneMytra.png';
-
 
 const brands = [
   { name: 'AVA', logo: ava },
@@ -24,28 +25,27 @@ const brands = [
 
 const BrandsSection = () => {
   return (
-    <section className="py-24 bg-white text-center">
-      <h2 className="m2 text-3xl font-bold mb-20">
-        Brands we have worked with
-      </h2>
-      <div className="flex justify-center items-center gap-12 flex-wrap px-4">
-      
-        
+    <section className="brands-section" style={{ padding: '2rem 0', backgroundColor: '#f9f9f9' }}>
+      <h2 className="lg:text-3xl sm:text-xl md:text-2xl font-bold" style={{
+    textAlign: 'center',
+    marginBottom: '3rem',
+    background: 'linear-gradient(to right, #2FBECE, #2974B7)',
+    WebkitBackgroundClip: 'text',
+    WebkitTextFillColor: 'transparent',
+    
+  }}>Brands we have worked with</h2>
+      <Marquee speed={50} gradient={false} pauseOnHover={true}>
         {brands.map((brand, index) => (
-          
-          <div key={index} className="transition-all duration-300">
-            
+          <div key={index} style={{ margin: '0 40px', display: 'flex', alignItems: 'center' }}>
             <img
-            
               src={brand.logo}
               alt={brand.name}
-              className="h-24 filter  transition duration-300 ease-in-out"
+              style={{ height: '60px', objectFit: 'contain' }}
+              title={brand.name}
             />
           </div>
         ))}
-        
-        
-      </div>
+      </Marquee>
     </section>
   );
 };

@@ -60,8 +60,13 @@ const Hero = () => {
         <h2 ref={subtitleRef} className="hero-subtitle">
           Scale Effortlessly
         </h2>
+        
+        {/* Updated Contact Button with Animation */}
         <button className="contact-btn">
-          Contact Us <ArrowRightCircle size={20} />
+          <span className="btn-text">Contact Us</span>
+          <span className="arrow-container">
+            <ArrowRightCircle size={30} className="arrow-icon" />
+          </span>
         </button>
       </div>
       
