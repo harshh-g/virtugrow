@@ -63,7 +63,7 @@ const Portfolio = () => {
               whileHover={{ scale: 1.05 }}
               initial={{ opacity: 0, y: 50 }}
               whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: i * 0.1 }}
+              transition={{ duration: 0.6, delay: i * 0.2, ease: 'easeOut' }}
               viewport={{ once: true }}
             >
               <div className="overflow-hidden">

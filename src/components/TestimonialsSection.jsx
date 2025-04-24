@@ -4,6 +4,7 @@ import 'swiper/css';
 import 'swiper/css/pagination';
 import 'swiper/css/navigation';
 import 'swiper/css/effect-fade';
+import { motion } from 'framer-motion';
 
 const testimonials = [
   {
@@ -40,45 +41,48 @@ const testimonials = [
 
 export default function TestimonialsSection() {
   return (
-    <div className="bg-gray-50 py-12 px-4 sm:px-6 lg:px-8">
-      <h2 className="text-center text-sky-500 text-sm font-semibold mb-2">Testimonials</h2>
-      <h3 className="text-3xl text-center font-bold text-gray-900 mb-10">Hear from Our Clients</h3>
+    <div className="bg-gradient-to-br from-white via-gray-100 to-white py-16 px-4 sm:px-6 lg:px-8 relative z-10 overflow-hidden">
+      <h2 className="text-center text-sky-500 text-sm font-semibold uppercase mb-2 tracking-widest">Testimonials</h2>
+      <h3 className="text-4xl md:text-5xl text-center font-extrabold text-gray-900 mb-16">What Our Clients Say</h3>
+
       <Swiper
         modules={[Pagination, Navigation, Autoplay, EffectFade]}
         effect="fade"
         fadeEffect={{ crossFade: true }}
         spaceBetween={30}
         slidesPerView={1}
-        autoplay={{ delay: 3000, disableOnInteraction: false }}
+        autoplay={{ delay: 4000, disableOnInteraction: false }}
         pagination={{ clickable: true }}
         navigation
-        className="max-w-4xl mx-auto"
+        className="max-w-5xl mx-auto"
       >
         {testimonials.map((testimonial, index) => (
           <SwiperSlide key={index}>
-            <div className="bg-white rounded-2xl shadow-md p-6 flex flex-col items-start gap-4 h-full transition-all duration-700 ease-in-out">
-              <svg
-                className="w-8 h-8 text-sky-500"
-                fill="currentColor"
-                viewBox="0 0 24 24"
-              >
-                <path d="M7.17 6A5.002 5.002 0 002 11v2a3 3 0 003 3h3a3 3 0 003-3v-2a5.002 5.002 0 00-3.83-4.83zM17.17 6A5.002 5.002 0 0012 11v2a3 3 0 003 3h3a3 3 0 003-3v-2a5.002 5.002 0 00-3.83-4.83z" />
-              </svg>
-              <p className="text-gray-800 text-base font-medium leading-relaxed">
+            <motion.div
+              initial={{ opacity: 0, y: 40 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.7, delay: index * 0.1, ease: 'easeOut' }}
+              viewport={{ once: true }}
+              className="relative bg-white/60 backdrop-blur-lg border border-white/30 shadow-xl rounded-3xl p-8 md:p-10 flex flex-col gap-6 mx-auto max-w-xl"
+            >
+              <div className="absolute -top-5 -left-5 text-sky-400 text-7xl font-serif opacity-30 pointer-events-none">“</div>
+
+              <p className="text-lg md:text-xl text-gray-700 font-medium leading-relaxed">
                 {testimonial.quote}
               </p>
-              <div className="flex items-center gap-3 mt-auto">
+
+              <div className="flex items-center gap-4 pt-4 border-t border-gray-200">
                 <img
-                  className="w-10 h-10 rounded-full object-cover"
+                  className="w-12 h-12 md:w-14 md:h-14 rounded-full border-2 border-sky-400"
                   src={testimonial.image}
                   alt={testimonial.name}
                 />
                 <div>
-                  <p className="text-gray-900 font-semibold">{testimonial.name}</p>
+                  <p className="text-gray-900 font-semibold text-lg">{testimonial.name}</p>
                   <p className="text-gray-500 text-sm">{testimonial.role}</p>
                 </div>
               </div>
-            </div>
+            </motion.div>
           </SwiperSlide>
         ))}
       </Swiper>
