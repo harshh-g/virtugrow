@@ -1,0 +1,26 @@
+.v2{
+    
+font-family: Poppins;
+font-size: 80px;
+font-style: normal;
+font-weight: 500;
+line-height: 120%; /* 88px */
+letter-spacing: -4.8px;
+
+background: linear-gradient(182deg, #FFF 1.76%, #909090 98.24%);
+background-clip: text;
+-webkit-background-clip: text;
+-webkit-text-fill-color: transparent;
+}
+
+.c2{
+    margin-top: 1rem;
+    width: 80%;
+    color: var(--Grey, #909090);
+text-align: right;
+font-family: Poppins;
+font-size: 24px;
+font-style: normal;
+font-weight: 400;
+line-height: 160%; /* 38.4px */
+}
