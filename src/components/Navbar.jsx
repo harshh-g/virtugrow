@@ -23,7 +23,7 @@ const Navbar = () => {
 
   return (
     <>
-      <header className="fixed top-5 left-1/2 transform -translate-x-1/2 z-50 transition-all duration-300 lg:w-[580px] md:w-[560px] w-[400px] h-[72px] bg-black/40 backdrop-blur-2xl rounded-full px-8 py-5 flex justify-between items-center">
+      <header className="fixed top-5 left-1/2 transform -translate-x-1/2 z-50 transition-all duration-300 lg:w-[580px] md:w-[560px] w-[400px] h-[72px]   rounded-full px-8 py-5 flex justify-between items-center">
         <div className="flex items-center">
           <Link to="/" className="flex items-center">
             <img src={logo} className="w-14 h-16" alt="Logo" />
@@ -43,7 +43,7 @@ const Navbar = () => {
         
         {/* Mobile Menu Button - Toggle between hamburger and X */}
         <button
-          className="md:hidden text-white focus:outline-none z-50"
+          className="md:hidden text-gray-500 focus:outline-none z-50"
           onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
           aria-label={mobileMenuOpen ? "Close menu" : "Open menu"}
         >
@@ -101,7 +101,7 @@ const Navbar = () => {
                 </li>
                 <li>
                   <Link
-                    to="/services"
+                    to="/servicepage"
                     className="block text-gray-300 text-2xl font-medium hover:text-cyan-400 transition-colors"
                     onClick={() => setMobileMenuOpen(false)}
                   >

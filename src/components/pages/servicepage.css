@@ -24,3 +24,56 @@ font-style: normal;
 font-weight: 400;
 line-height: 160%; /* 38.4px */
 }
+
+
+.text-h2{
+    align-self: stretch;
+    color: #222;
+font-family: Poppins;
+font-size: 40px;
+font-style: normal;
+font-weight: 600;
+line-height: 140%; /* 56px */
+}
+
+.text-h3{
+    display: flex;
+flex-direction: column;
+align-items: flex-start;
+gap: -128px;
+align-self: stretch;
+}
+
+
+@media screen and (max-width: 640px) {
+    .v2{
+        font-size: 40px;
+        letter-spacing: -2.4px;
+    }
+    .c2{
+        font-size: 16px;
+    }
+    
+}
+
+@media screen and (min-width: 641px) and (max-width: 1024px) {
+    .v2{
+        font-size: 60px;
+        letter-spacing: -3.6px;
+    }
+    .c2{
+        font-size: 20px;
+    }
+    
+}
+
+@media screen and (min-width: 1025px) {
+    .v2{
+        font-size: 80px;
+        letter-spacing: -4.8px;
+    }
+    .c2{
+        font-size: 24px;
+    }   
+    
+}

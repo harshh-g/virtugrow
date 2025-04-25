@@ -175,7 +175,7 @@ export default function ServicePage() {
         <div className="h-screen"></div>
         
         {/* Section 1: Design - z-index: 10 */}
-        <section className={`service-section sticky top-0 z-10 py-16 transition-all duration-700 ${activeSection >= 0 ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-20'} bg-white
+        <section className={`service-section sticky top-0 z-10 py-16 transition-all shadow-xl duration-700 ${activeSection >= 0 ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-20'} bg-white
 ]`}>
           <div className="w-screen h-screen mx-auto px-6 pt-24">
             <div className="flex flex-col md:flex-row">
@@ -186,7 +186,7 @@ export default function ServicePage() {
               <div className="md:w-2/3 mt-6 md:mt-0">
                 <h2 className="text-2xl font-bold mb-4">Designing Exceptional<br />Digital Experiences</h2>
                 <div className="bg-white rounded-lg p-4 mb-6">
-                  <img src={b2} alt="Design devices" className="w-full h-32 object-cover rounded" />
+                  <img src={b2} alt="Design devices" className="w-[300px] h-32 object-cover rounded" />
                 </div>
                 
                 <div className="space-y-4">
@@ -226,8 +226,8 @@ export default function ServicePage() {
         </section>
         
         {/* Section 2: Technology - z-index: 20 */}
-        <section className={`service-section sticky top-0 z-20 py-16 transition-all duration-700 ${activeSection >= 1 ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-20'} bg-white`}>
-          <div className="w-screen h-screen mx-auto px-6 pt-24">
+        <section className={`service-section sticky top-0 z-20 py-16 transition-all shadow-2xl duration-700 ${activeSection >= 1 ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-20'} bg-white`}>
+          <div className="w-screen h-screen mx-auto px-6 ">
             <div className="flex flex-col md:flex-row">
               <div className="md:w-1/3">
                 <span className="text-cyan-500 text-6xl font-bold">02</span>
@@ -236,7 +236,7 @@ export default function ServicePage() {
               <div className="md:w-2/3 mt-6 md:mt-0">
                 <h2 className="text-2xl font-bold mb-4">Innovative Technology<br />Solutions for a Digital World</h2>
                 <div className="bg-white rounded-lg p-4 mb-6">
-                  <img src={b2} alt="AI technology" className="w-full h-32 object-cover rounded" />
+                  <img src={b2} alt="AI technology" className="w-[300px] h-32 object-cover rounded" />
                 </div>
                 
                 <div className="space-y-4">
@@ -276,7 +276,7 @@ export default function ServicePage() {
         </section>
         
         {/* Section 3: Marketing - z-index: 30 */}
-        <section className={`service-section sticky top-0 z-30 py-16 transition-all duration-700 ${activeSection >= 2 ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-20'} bg-white`}>
+        <section className={`service-section sticky top-0 z-30 py-16 shadow-2xl transition-all duration-700 ${activeSection >= 2 ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-20'} bg-white`}>
           <div className="w-screen h-screen mx-auto px-6 pt-24">
             <div className="flex flex-col md:flex-row">
               <div className="md:w-1/3">
@@ -286,7 +286,7 @@ export default function ServicePage() {
               <div className="md:w-2/3 mt-6 md:mt-0">
                 <h2 className="text-2xl font-bold mb-4">Strategic Digital Marketing<br />for Growth & Engagement</h2>
                 <div className="bg-white rounded-lg p-4 mb-6">
-                  <img src={b2} alt="SEO" className="w-full h-32 object-cover rounded" />
+                  <img src={b2} alt="SEO" className="w-[300px] h-32 object-cover rounded" />
                 </div>
                 
                 <div className="space-y-4">
@@ -326,7 +326,7 @@ export default function ServicePage() {
         </section>
         
         {/* Section 4: Branding - z-index: 40 */}
-        <section className={`service-section sticky top-0 z-40 py-16 transition-all duration-700 ${activeSection >= 3 ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-20'} bg-white`}>
+        <section className={`service-section sticky top-0 z-40 py-16 transition-all shadow-2xl duration-700 ${activeSection >= 3 ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-20'} bg-white`}>
           <div className="w-screen h-screen mx-auto px-6 pt-24">
             <div className="flex flex-col md:flex-row">
               <div className="md:w-1/3">
@@ -336,7 +336,7 @@ export default function ServicePage() {
               <div className="md:w-2/3 mt-6 md:mt-0">
                 <h2 className="text-2xl font-bold mb-4">Building Strong &<br />Memorable Brands</h2>
                 <div className="bg-white rounded-lg p-4 mb-6">
-                  <img src={b2} alt="Branding" className="w-full h-32 object-cover rounded" />
+                  <img src={b2} alt="Branding" className="w-[300px] h-32 object-cover rounded" />
                 </div>
                 
                 <div className="space-y-4">
@@ -379,7 +379,7 @@ export default function ServicePage() {
         <div className="h-screen"></div>
       </div>
       
-      {/* Footer - z-index: 50 */}
+      
       
     </div>
   );
