@@ -23,7 +23,7 @@ const Navbar = () => {
 
   return (
     <>
-      <header className="fixed top-5 left-1/2 transform -translate-x-1/2 z-50 transition-all duration-300 lg:w-[580px] md:w-[560px] w-[400px] h-[72px]   rounded-full px-8 py-5 flex justify-between items-center">
+      <header className="fixed top-5 left-1/2 transform -translate-x-1/2 z-50 transition-all duration-300 lg:w-[580px] md:w-[560px] w-[400px] h-[72px] bg-balck/90 backdrop-blur-2xl   rounded-full px-8 py-5 flex justify-between items-center">
         <div className="flex items-center">
           <Link to="/" className="flex items-center">
             <img src={logo} className="w-14 h-16" alt="Logo" />
@@ -35,7 +35,7 @@ const Navbar = () => {
           <ul className="flex space-x-7">
             <li><Link to="/" className="text-white hover:text-cyan-400 text-lg transition-colors">Home</Link></li>
             <li><Link to="/servicepage" className="text-gray-300 hover:text-cyan-400 text-lg transition-colors">Services</Link></li>
-            <li><Link to="/portfolio" className="text-gray-300 hover:text-cyan-400 text-lg transition-colors">Portfolio</Link></li>
+            <li><Link to="/portfoliopage" className="text-gray-300 hover:text-cyan-400 text-lg transition-colors">Portfolio</Link></li>
             <li><Link to="/about" className="text-gray-300 hover:text-cyan-400 text-lg transition-colors">About Us</Link></li>
             <li><Link to="/blog" className="text-gray-300 hover:text-cyan-400 text-lg transition-colors">Blog</Link></li>
           </ul>
@@ -110,7 +110,7 @@ const Navbar = () => {
                 </li>
                 <li>
                   <Link
-                    to="/portfolio"
+                    to="/portfoliopage"
                     className="block text-gray-300 text-2xl font-medium hover:text-cyan-400 transition-colors"
                     onClick={() => setMobileMenuOpen(false)}
                   >

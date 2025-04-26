@@ -153,9 +153,9 @@ export default function ServicePage() {
       
       {/* Hero Section - Fixed */}
       <section className="bg-black text-white  min-h-screen flex items-center sticky top-0 left-0 w-full z-0 ">
-        <div className="w-full  px-6">
-          <div className="flex flex-col">
-            <p className="text-cyan-400 text-sm mb-1 ">• Services</p>
+        <div className="w-[80%] mx-auto h-[50%] flex flex-col px-6">
+          <div className=" flex leading-tight  justify-start">
+            <p className="text-cyan-400 text-sm pt-10  pr-16 ">• Services</p>
             <h1 className="v2">
               Crafting Digital<br />
               Success with Design<br />

@@ -5,6 +5,7 @@ import Footer from './components/Footer';
 import {  Route, Routes } from 'react-router';
 import Home from './components/Home';
 import ServicePage from './components/pages/ServicePage';
+import PortfolioPage from './components/pages/PortfolioPage';
 
 const App = () => {
     
@@ -13,6 +14,7 @@ const App = () => {
     <Routes>
       <Route path="/" element={<Home />} />
       <Route path="/servicepage" element={<ServicePage />} />
+      <Route path="/portfoliopage" element={<PortfolioPage />} />
     </Routes>
     <Footer />
 
