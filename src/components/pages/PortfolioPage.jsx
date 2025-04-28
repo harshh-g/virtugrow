@@ -32,63 +32,63 @@ export default function PortfolioPage() {
     {
       category: "UX/UI Design",
       projects: [
-        { id: 1, name: "Project Name Here", description: "Small description", image: comp1 },
-        { id: 2, name: "Project Name Here", description: "Small description", image: comp4 },
-        { id: 3, name: "Project Name Here", description: "Small description", image: comp2 },
-        { id: 4, name: "Project Name Here", description: "Small description", image: comp5 },
-        { id: 5, name: "Project Name Here", description: "Small description", image: comp7 },
-        { id: 6, name: "Project Name Here", description: "Small description", image: comp6 },
-        { id: 7, name: "Project Name Here", description: "Small description", image: comp3 },
-        { id: 8, name: "Project Name Here", description: "Small description", image: comp8 },
-        { id: 9, name: "Project Name Here", description: "Small description", image: comp9 }
+        { id: 1, name: "Project 1", description: "Small description", image: comp1 , height: false},
+        { id: 2, name: "Project 2", description: "Small description", image: comp9 , height: true},
+        { id: 3, name: "Project 3", description: "Small description", image: comp3 , height: false},
+        { id: 4, name: "Project 4", description: "Small description", image: comp7 , height: false},
+        { id: 5, name: "Project 5", description: "Small description", image: comp4 , height: false},
+        { id: 6, name: "Project 6", description: "Small description", image: comp10 ,height:true},
+        { id: 7, name: "Project 7", description: "Small description", image: comp5 , height:true},
+        { id: 8, name: "Project 8", description: "Small description", image: comp8 , height: false}, 
+        { id: 9, name: "Project 9", description: "Small description", image: comp2 ,height: false}
       ]
     },
     {
       category: "Web Development",
       projects: [
-        { id: 1, name: "Project Name Here", description: "Small description", image: comp9 },
-        { id: 2, name: "Project Name Here", description: "Small description", image: comp2 },
-        { id: 3, name: "Project Name Here", description: "Small description", image: comp7 },
-        { id: 4, name: "Project Name Here", description: "Small description", image: comp4 },
-        { id: 5, name: "Project Name Here", description: "Small description", image: comp5 },
-        { id: 6, name: "Project Name Here", description: "Small description", image: comp6 },
-        { id: 7, name: "Project Name Here", description: "Small description", image: comp1 },
-        { id: 8, name: "Project Name Here", description: "Small description", image: comp8 },
-        { id: 9, name: "Project Name Here", description: "Small description", image: comp3 }
+        { id: 1, name: "Project 1", description: "Small description", image: comp7 , height: false},
+        { id: 2, name: "Project 2", description: "Small description", image: comp3 , height: true},
+        { id: 3, name: "Project 3", description: "Small description", image: comp8 , height: false},
+        { id: 4, name: "Project 4", description: "Small description", image: comp1 , height: false},
+        { id: 5, name: "Project 5", description: "Small description", image: comp4 , height: false},
+        { id: 6, name: "Project 6", description: "Small description", image: comp6 ,height:true},
+        { id: 7, name: "Project 7", description: "Small description", image: comp5 , height:true},
+        { id: 8, name: "Project 8", description: "Small description", image: comp10 , height: false}, 
+        { id: 9, name: "Project 9", description: "Small description", image: comp2 ,height: false}
       ]
     },
     {
       category: "App Development",
       projects: [
-        { id: 1, name: "Project Name Here", description: "Small description", image: comp1 },
-        { id: 2, name: "Project Name Here", description: "Small description", image: comp2 },
-        { id: 3, name: "Project Name Here", description: "Small description", image: comp3 },
-        { id: 4, name: "Project Name Here", description: "Small description", image: comp4 },
-        { id: 5, name: "Project Name Here", description: "Small description", image: comp5 },
-        { id: 6, name: "Project Name Here", description: "Small description", image: comp6 },
-        { id: 7, name: "Project Name Here", description: "Small description", image: comp7 },
-        { id: 8, name: "Project Name Here", description: "Small description", image: comp8 },
-        { id: 9, name: "Project Name Here", description: "Small description", image: comp9 }
+        { id: 1, name: "Project 1", description: "Small description", image: comp3 , height: false},
+        { id: 2, name: "Project 2", description: "Small description", image: comp5 , height: true},
+        { id: 3, name: "Project 3", description: "Small description", image: comp8 , height: false},
+        { id: 4, name: "Project 4", description: "Small description", image: comp6 , height: false},
+        { id: 5, name: "Project 5", description: "Small description", image: comp4 , height: false},
+        { id: 6, name: "Project 6", description: "Small description", image: comp1 ,height:true},
+        { id: 7, name: "Project 7", description: "Small description", image: comp9 , height:true},
+        { id: 8, name: "Project 8", description: "Small description", image: comp10 , height: false}, 
+        { id: 9, name: "Project 9", description: "Small description", image: comp2 ,height: false}
       ]
     },
     {
       category: "Digital Marketing",
       projects: [
-        { id: 1, name: "Project Name Here", description: "Small description", image: comp1 },
-        { id: 2, name: "Project Name Here", description: "Small description", image: comp2 },
-        { id: 3, name: "Project Name Here", description: "Small description", image: comp3 },
-        { id: 4, name: "Project Name Here", description: "Small description", image: comp4 },
-        { id: 5, name: "Project Name Here", description: "Small description", image: comp5 },
-        { id: 6, name: "Project Name Here", description: "Small description", image: comp6 },
-        { id: 7, name: "Project Name Here", description: "Small description", image: comp7 },
-        { id: 8, name: "Project Name Here", description: "Small description", image: comp8 },
-        { id: 9, name: "Project Name Here", description: "Small description", image: comp9 }
-      ]
+        { id: 1, name: "Project 1", description: "Small description", image: comp4 , height: false},
+        { id: 2, name: "Project 2", description: "Small description", image: comp7 , height: true},
+        { id: 3, name: "Project 3", description: "Small description", image: comp8 , height: false},
+        { id: 4, name: "Project 4", description: "Small description", image: comp3 , height: false},
+        { id: 5, name: "Project 5", description: "Small description", image: comp9 , height: false},
+        { id: 6, name: "Project 6", description: "Small description", image: comp6 ,height:true},
+        { id: 7, name: "Project 7", description: "Small description", image: comp5 , height:true},
+        { id: 8, name: "Project 8", description: "Small description", image: comp3 , height: false}, 
+        { id: 9, name: "Project 9", description: "Small description", image: comp2 ,height: false}      ]
     }
   ];
 
   const [activeCategory, setActiveCategory] = useState("Featured Works");
   const [displayedProjects, setDisplayedProjects] = useState([]);
+  const blueDot = <div className="w-2 h-2 bg-blue-500 rounded-full"></div>
 
   // Update displayed projects when category changes
   useEffect(() => {
@@ -120,21 +120,23 @@ export default function PortfolioPage() {
   <section className="container mx-auto px-4 border-t border-gray-700">
     <div className="flex flex-col sm:flex-row items-start sm:items-center py-4 overflow-x-auto">
       <div className="flex items-center space-x-2 mb-4 sm:mb-0 sm:mr-8">
-        <div className="w-2 h-2 bg-blue-500 rounded-full"></div>
-        <span className="text-blue-500 whitespace-nowrap">Featured Works</span>
+        
       </div>
       <div className="flex flex-nowrap md:flex-wrap gap-4 sm:gap-6 overflow-x-auto pb-2 md:pb-0">
         {portfolioData.map(item => (
           <button
             key={item.category}
             onClick={() => setActiveCategory(item.category)}
-            className={`${activeCategory === item.category ? 'text-white' : 'text-gray-400'} hover:text-white transition-colors whitespace-nowrap`}
-          >
+            className={` ${activeCategory === item.category ?   ' text-transparent bg-gradient-to-r from-cyan-400 via-blue-500 to-indigo-600 bg-clip-text  ' : 'text-gray-400 hover:text-white '} flex   transition-colors whitespace-nowrap`}
+          >{activeCategory === item.category && (
+            <div className="w-2 h-2  bg-blue-500 mr-3 mt-2 rounded-full"></div>
+          )}
             {item.category}
           </button>
         ))}
       </div>
     </div>
+    
   </section>
 
   {/* Portfolio Grid */}
@@ -155,9 +157,7 @@ export default function PortfolioPage() {
             <p className="text-gray-400">{project.description}</p>
           </div>
           <div className="absolute inset-0 bg-blue-500/20 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
-            <button className="bg-white text-gray-900 px-4 py-2 rounded-full opacity-0 group-hover:opacity-100 transition-opacity transform translate-y-4 group-hover:translate-y-0 duration-300">
-              View Project
-            </button>
+            
           </div>
         </div>
       ))}
