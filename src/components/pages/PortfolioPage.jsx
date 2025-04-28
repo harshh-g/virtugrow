@@ -143,28 +143,37 @@ export default function PortfolioPage() {
       </section>
 
       {/* Filter Categories */}
-      <section className="container mx-auto px-4 border-t border-gray-700">
-        <div className="flex flex-wrap py-4 gap-4 overflow-x-auto">
-          {portfolioData.map(item => (
-            <button
-              key={item.category}
-              onClick={() => setActiveCategory(item.category)}
-              className={`transition-colors ${activeCategory === item.category
-                ? 'text-transparent bg-gradient-to-r from-cyan-400 via-blue-500 to-indigo-600 bg-clip-text'
-                : 'text-gray-400 hover:text-white'
-                } flex items-center`}
-            >
-              {activeCategory === item.category && (
-                <div className="w-2 h-2 bg-blue-500 rounded-full mr-3 mt-1"></div>
-              )}
-              {item.category}
-            </button>
-          ))}
-        </div>
-      </section>
+      <section className="container mx-auto px-4 mt-6">
+  {/* Top hr */}
+  <hr className="border-gray-700 w-full" />
+
+  <div className="flex justify-center items-center overflow-x-auto scrollbar-hide gap-6 sm:gap-10 md:gap-16 lg:gap-24 py-6 sm:py-8 md:py-10">
+    {portfolioData.map(item => (
+      <button
+        key={item.category}
+        onClick={() => setActiveCategory(item.category)}
+        className={`whitespace-nowrap transition-colors flex items-center ${
+          activeCategory === item.category
+            ? 'text-transparent bg-gradient-to-r from-cyan-400 via-blue-500 to-indigo-600 bg-clip-text'
+            : 'text-gray-400 hover:text-white'
+        }`}
+      >
+        {activeCategory === item.category && (
+          <div className="w-2 h-2 bg-blue-500 rounded-full mr-2" />
+        )}
+        {item.category}
+      </button>
+    ))}
+  </div>
+
+  {/* Bottom hr */}
+  <hr className="border-gray-700 w-full" />
+</section>
+
+
 
       {/* Portfolio Grid */}
-      <section className="container mx-auto px-4 py-10 portfolio-grid">
+      <section className="container mx-auto px-4  py-10 portfolio-grid">
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
           {displayedProjects.map(project => (
             <div key={project.id} className="portfolio-grid-item group relative overflow-hidden rounded-lg">
@@ -174,10 +183,10 @@ export default function PortfolioPage() {
                   alt={project.name}
                   className={`portfolio-img w-full object-cover rounded-lg ${project.height ? 'h-[530px]' : 'h-[300px]'}`}
                 />
-              </div>
-              <div className={`absolute ${project.height ? 'bottom-0' : 'top-[313px]'} left-0 right-0 p-4 bg-gradient-to-t from-black/80 to-transparent`}>
+              <div className={` ${project.height ? 'bottom-0 ' : 'top-[313px]'} p-3 `}>
                 <h3 className="text-xl font-semibold">{project.name}</h3>
                 <p className="text-gray-400">{project.description}</p>
+              </div>
               </div>
             </div>
           ))}
