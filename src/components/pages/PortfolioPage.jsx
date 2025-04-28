@@ -155,7 +155,7 @@ export default function PortfolioPage() {
         className={`whitespace-nowrap transition-colors category-btn flex items-center ${
           activeCategory === item.category
             ? 'text-transparent bg-gradient-to-r from-cyan-400 via-blue-500 to-indigo-600 bg-clip-text'
-            : 'text-gray-400 hover:text-white'
+            : 'text-white'
         }`}
       >
         {activeCategory === item.category && (
