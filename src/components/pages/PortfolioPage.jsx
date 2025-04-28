@@ -18,15 +18,15 @@ export default function PortfolioPage() {
     {
       category: "Featured Works",
       projects: [
-        { id: 1, name: "Project Name Here", description: "Small description", image: comp1 },
-        { id: 2, name: "Project Name Here", description: "Small description", image: comp2 },
-        { id: 3, name: "Project Name Here", description: "Small description", image: comp3 },
-        { id: 4, name: "Project Name Here", description: "Small description", image: comp4 },
-        { id: 5, name: "Project Name Here", description: "Small description", image: comp5 },
-        { id: 6, name: "Project Name Here", description: "Small description", image: comp6 },
-        { id: 7, name: "Project Name Here", description: "Small description", image: comp7 },
-        { id: 8, name: "Project Name Here", description: "Small description", image: comp8 },
-        { id: 9, name: "Project Name Here", description: "Small description", image: comp9 }
+        { id: 1, name: "Project 1", description: "Small description", image: comp10 , height: false},
+        { id: 2, name: "Project 2", description: "Small description", image: comp9 , height: true},
+        { id: 3, name: "Project 3", description: "Small description", image: comp8 , height: false},
+        { id: 4, name: "Project 4", description: "Small description", image: comp7 , height: false},
+        { id: 5, name: "Project 5", description: "Small description", image: comp4 , height: false},
+        { id: 6, name: "Project 6", description: "Small description", image: comp1 ,height:true},
+        { id: 7, name: "Project 7", description: "Small description", image: comp5 , height:true},
+        { id: 8, name: "Project 8", description: "Small description", image: comp3 , height: false}, 
+        { id: 9, name: "Project 9", description: "Small description", image: comp2 ,height: false}
       ]
     },
     {
@@ -138,19 +138,19 @@ export default function PortfolioPage() {
   </section>
 
   {/* Portfolio Grid */}
-  <section className="container mx-auto px-4 py-8">
+  <section className="container mx-auto px-4 py-10">
     <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6">
       {displayedProjects.map(project => (
         <div key={project.id} className="group relative overflow-hidden rounded-lg">
-          <div className="w-full h-[300px] sm:h-[400px] lg:h-[450px] xl:h-[550px] mt-4 bg-transparent">
+          <div className="w-full h-full  mt-4 bg-transparent">
             <img 
               src={project.image}
               alt={project.name}
-              className="w-full h-full object-cover rounded-lg"
-            />
+              className={`w-full object-cover rounded-lg ${project.height ? 'h-[530px]' : 'h-[300px]'}`}
+              /> 
           </div>
           
-          <div className="absolute bottom-0 left-0 right-0 p-4 bg-gradient-to-t from-black/80 to-transparent">
+          <div className={`absolute ${project.height ? 'bottom-0' : 'top-[313px]'} left-0 right-0 p-4  bg-gradient-to-t from-black/80 to-transparent`}>
             <h3 className="text-xl font-semibold">{project.name}</h3>
             <p className="text-gray-400">{project.description}</p>
           </div>
