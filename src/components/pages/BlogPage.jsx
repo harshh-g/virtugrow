@@ -210,7 +210,9 @@ export default function BlogPage() {
             <p className="sub-heading">Discover the latest news, insights, and strategies for your business growth.</p>
              </div>
             </div>
-        
+
+            <div className='spread-circle'>
+            </div>
       </section>
       
       {/* Featured Blogs Slider */}
@@ -219,7 +221,7 @@ export default function BlogPage() {
         <section className="py-20 px-4 h-full md:px-8 w-[85%]  mx-auto">
         <h2 className="text-blue-400 text-2xl mb-10">Featured Blogs</h2>
         
-        <div className="relative overflow-visible" ref={sliderRef}>
+        <div className="relative overflow-hidden lg:overflow-visible md:overflow-visible  " ref={sliderRef}>
           <div 
             className="flex transition-transform duration-700 ease-out" 
             style={{ 
@@ -304,10 +306,14 @@ export default function BlogPage() {
 
       {/* Portfolio Grid */}
       <section className="container mx-auto px-4  py-10 portfolio-grid">
+        
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div className='spread-circle'>
+        </div>
           {displayedProjects.map(project => (
             <div key={project.id} className="portfolio-grid-item group relative overflow-hidden rounded-lg">
               <div className="mt-4 bg-transparent">
+              
                 <img
                   src={project.image}
                   alt={project.name}
