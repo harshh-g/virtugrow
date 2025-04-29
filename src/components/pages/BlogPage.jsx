@@ -62,21 +62,23 @@ export default function BlogPage() {
   }, [currentSlide, blogs.length]);
 
   return (
-    <main className="min-h-screen bg-black text-white">
+    <main className="h-full overflow-auto bg-black text-white">
       {/* Hero Section */}
-      <section className="py-44  px-10 w-[90%]  mx-auto  h-[100vh] first-section  "> 
-                <div className="flex flex-col items-start space-y-4 ">
-          <div className="flex items-center mt-10  ml-8 ">
-            <div className="h-2 w-2 rounded-full bg-cyan-400 mr-3"></div>
-              <span className="blog-aplha mr-14">Blogs</span>
+      <section className=" first-section  "> 
+                <div className="flex flex-col items-start space-y-4  ">
+          <div className="flex items-start lg:items-center md:items-start mt-10  flex-col md:flex-row ">
+            <div className='flex items-center '>
+            <div className="h-2 w-2 rounded-full bg-cyan-400 mr-3 "></div>
+              <span className="blog-aplha mr-15 "> Blogs</span>
+            </div>
             <h1 className='blog-heading '>
             Fresh ideas and
             </h1>           
           </div>
-            <div>
+            <div className=''>
               <h1 className='blog-heading2 '>insights to grow</h1>
             </div>
-            <div>
+            <div className=''>
               <h1 className='blog-heading3 '>your brand online</h1>
             </div>
           </div>
@@ -89,7 +91,9 @@ export default function BlogPage() {
       </section>
       
       {/* Featured Blogs Slider */}
-      <section className="py-16 px-4 md:px-8 max-w-7xl mx-auto">
+    
+     {/*
+        <section className="py-16 px-4 md:px-8 max-w-7xl mx-auto">
         <h2 className="text-blue-400 text-2xl mb-10">Featured Blogs</h2>
         
         <div className="relative overflow-hidden" ref={sliderRef}>
@@ -132,8 +136,7 @@ export default function BlogPage() {
             ))}
           </div>
           
-          {/* Slider Navigation Dots */}
-          <div className="flex justify-center mt-8 space-x-2">
+                    <div className="flex justify-center mt-8 space-x-2">
             {blogs.map((_, index) => (
               <button
                 key={index}
@@ -145,23 +148,10 @@ export default function BlogPage() {
           </div>
         </div>
       </section>
+      */ }
 
-      {/* Add custom animation styles */}
-      <style jsx>{`
-        @keyframes fadeIn {
-          from { opacity: 0; transform: translateY(20px); }
-          to { opacity: 1; transform: translateY(0); }
-        }
-        
-        .animate-fade-in {
-          animation: fadeIn 1s ease-out forwards;
-        }
-        
-        .animate-fade-in-delay {
-          opacity: 0;
-          animation: fadeIn 1s ease-out 0.3s forwards;
-        }
-      `}</style>
+      
+      
     </main>
   );
 }

@@ -1,131 +1,159 @@
-.first-section{
+.first-section {
+  height: 100vh;
+  margin: 0 auto;
+  
   display: flex;
+  flex-direction: column;
+   justify-content: space-evenly;
+  width: 90%;
+  padding: 44px 10px;
 
-flex-direction: column;
-gap: 60px;
+
 }
 
-.blog-aplha{
+.blog-aplha {
   background: linear-gradient(to bottom, #2FBECE 56.52%, #2974B7 117.39%);
-background-clip: text;
--webkit-background-clip: text;
--webkit-text-fill-color: transparent;
-font-family: Poppins;
-font-size: 20px;
-font-style: normal;
-font-weight: 500;
-line-height: normal;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-family: Poppins;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
 }
 
 
-.blog-heading{
-
-font-family: Poppins;
-font-size: 104px;
-font-style: normal;
-font-weight: 500;
- /* 88px */
-letter-spacing: -3.8px;
-background: linear-gradient(to bottom, #FFF 1.76%, #909090 98.24%);
-background-clip: text;
--webkit-background-clip: text;
--webkit-text-fill-color: transparent;
-line-height: 110%;
-}
-
-.blog-heading2{
+.blog-heading {
 
   font-family: Poppins;
   font-size: 104px;
   font-style: normal;
   font-weight: 500;
-   /* 88px */
+  /* 88px */
   letter-spacing: -3.8px;
   background: linear-gradient(to bottom, #FFF 1.76%, #909090 98.24%);
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  line-height: 130px;
+  line-height: 110%;
+}
+
+.blog-heading2 {
+
+  font-family: Poppins;
+  font-size: 104px;
+  font-style: normal;
+  font-weight: 500;
+  /* 88px */
+  letter-spacing: -3.8px;
+  background: linear-gradient(to bottom, #FFF 1.76%, #909090 98.24%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  line-height: 110%;
+}
+
+
+.blog-heading3 {
+
+  font-family: Poppins;
+  font-size: 104px;
+  font-style: normal;
+  font-weight: 500;
+  /* 88px */
+  letter-spacing: -3.8px;
+  background: linear-gradient(to bottom, #FFF 1.76%, #909090 98.24%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  line-height: 110%;
+}
+
+
+.sub-heading-div {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+
+}
+
+
+.sub-heading-div2 {
+  width: 60%;
+
+}
+
+.sub-heading {
+  color: #909090;
+  text-align: right;
+  font-family: Poppins;
+  font-size: 30px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  flex-wrap: wrap;
+  padding-right: 30px;
+}
+
+
+@media screen and (max-width: 640px) {
+
+
+  .first-section {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
   }
 
 
-  .blog-heading3{
+  .sub-heading-div2 {
+    width: 100%;
 
-    font-family: Poppins;
-    font-size: 104px;
-    font-style: normal;
-    font-weight: 500;
-     /* 88px */
-    letter-spacing: -3.8px;
-    background: linear-gradient(to bottom, #FFF 1.76%, #909090 98.24%);
-    background-clip: text;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    line-height: 110%;
-    }
+  }
 
+  .sub-heading {
+    font-size: 20px;
+  }
 
-    .sub-heading-div{
-      width: 100%;
-      display: flex;
-      justify-content: flex-end;
-       
-    }
+  .blog-heading {
+    font-size: 36px;
+    letter-spacing: -0.72px;
 
+  }
 
-    .sub-heading-div2{
-      width: 60%;
-      
-    }
+  .blog-heading2 {
+    font-size: 36px;
+    letter-spacing: -0.72px;
 
-    .sub-heading{
-      color: #909090;
-text-align: right;
-font-family: Poppins;
-font-size: 30px;
-font-style: normal;
-font-weight: 400;
-line-height: normal;
-display: flex;
-flex-direction: column;
-align-items: flex-end;
-flex-wrap: wrap;
-padding-right: 30px;
-    }
+  }
+
+  .blog-heading3 {
+    font-size: 36px;
+    letter-spacing: -0.72px;
+
+  }
+
+}
+
+@media screen and (min-width: 641px) and (max-width: 1024px) {
+
+  .sub-heading-div2 {
+    width: 60%;
+
+  }
+
+  .sub-heading {
+    font-size: 20px;
+  }
 
 
-    @media screen and (max-width: 640px) {
-      .sub-heading-div2{
-        width: 100%;
-        
-      }
-      .sub-heading{
-        font-size: 20px;
-      }
-      
-    }
-    @media screen and (min-width: 641px) and (max-width: 1024px) {
-      .sub-heading-div2{
-        width: 100%;
-        
-      }
-      .sub-heading{
-        font-size: 20px;
-      }
 
-      
-    }
+}
 
-    @media screen and (min-width: 1025px) {
-      .sub-heading-div2{
-        width: 60%;
-        
-      }
-      .sub-heading{
-        font-size: 30px;
-      }
-      
-      
-    }
-
-    
+@media screen and (min-width: 1025px) {}
