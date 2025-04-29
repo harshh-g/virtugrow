@@ -67,8 +67,8 @@ export default function BlogPage() {
       <section className="py-44  px-10 w-[90%]  mx-auto  h-[100vh] first-section  "> 
                 <div className="flex flex-col items-start space-y-4 ">
           <div className="flex items-center mt-10  ml-8 ">
-            <div className="h-2 w-2 rounded-full bg-blue-400 mr-3"></div>
-              <span className="text-blue-400 mr-16 text-2xl">Blogs</span>
+            <div className="h-2 w-2 rounded-full bg-cyan-400 mr-3"></div>
+              <span className="blog-aplha mr-14">Blogs</span>
             <h1 className='blog-heading '>
             Fresh ideas and
             </h1>           
