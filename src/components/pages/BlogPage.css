@@ -1,3 +1,11 @@
+.first-section{
+  display: flex;
+
+flex-direction: column;
+gap: 60px;
+}
+
+
 .blog-heading{
 
 font-family: Poppins;
@@ -42,4 +50,33 @@ line-height: 110%;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     line-height: 110%;
+    }
+
+
+    .sub-heading-div{
+      width: 100%;
+      display: flex;
+      justify-content: flex-end;
+       
+    }
+
+
+    .sub-heading-div2{
+      width: 44%;
+      
+    }
+
+    .sub-heading{
+      color: #909090;
+text-align: right;
+font-family: Poppins;
+font-size: 24px;
+font-style: normal;
+font-weight: 400;
+line-height: normal;
+display: flex;
+flex-direction: column;
+align-items: flex-end;
+flex-wrap: wrap;
+padding-right: 30px;
     }

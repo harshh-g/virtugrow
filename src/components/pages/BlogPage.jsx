@@ -64,12 +64,12 @@ export default function BlogPage() {
   return (
     <main className="min-h-screen bg-black text-white">
       {/* Hero Section */}
-      <section className="py-44  px-10 w-[90%] h-[100vh]  mx-auto">
-        <div className="flex flex-col items-start  overflow-visible">
-          <div className="flex items-center space-x-2  w-full">
+      <section className="py-38  px-10  h-[100vh] first-section  "> 
+                <div className="flex flex-col items-start space-y-9 ">
+          <div className="flex items-center mt-10  ml-10 ">
             <div className="h-2 w-2 rounded-full bg-blue-400"></div>
-              <span className="text-blue-400 mr-10">Blogs</span>
-            <h1 className='blog-heading'>
+              <span className="text-blue-400 mr-10 text-2xl">Blogs</span>
+            <h1 className='blog-heading '>
             Fresh ideas and
             </h1>           
           </div>
@@ -77,20 +77,15 @@ export default function BlogPage() {
               <h1 className='blog-heading2 '>insights to grow</h1>
             </div>
             <div>
-              <h1 className='blog-heading3'>your brand online</h1>
+              <h1 className='blog-heading3 '>your brand online</h1>
             </div>
- 
-          
-          <h1 className="text-5xl md:text-7xl font-bold mb-6 leading-tight animate-fade-in">
-            
-             <br />
-            
-          </h1>
-          
-          <p className="text-gray-400 text-lg md:text-xl ml-auto max-w-md text-right animate-fade-in-delay">
-            Discover quick tips, trends, and strategies for digital success.
-          </p>
-        </div>
+          </div>
+            <div className="sub-heading-div   ">
+             <div className='sub-heading-div2 '>
+            <p className="sub-heading">Discover the latest news, insights, and strategies for your business growth.</p>
+             </div>
+            </div>
+        
       </section>
       
       {/* Featured Blogs Slider */}
