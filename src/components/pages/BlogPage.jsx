@@ -93,7 +93,7 @@ export default function BlogPage() {
       
       {/* Featured Blogs Slider */}
     
-     {/*
+     
         <section className="py-16 px-4 md:px-8 max-w-7xl mx-auto">
         <h2 className="text-blue-400 text-2xl mb-10">Featured Blogs</h2>
         
@@ -149,7 +149,7 @@ export default function BlogPage() {
           </div>
         </div>
       </section>
-      */ }
+      
 
       
       
