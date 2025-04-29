@@ -1,159 +1,223 @@
-.first-section {
-  height: 100vh;
-  margin: 0 auto;
-  
-  display: flex;
-  flex-direction: column;
-   justify-content: space-evenly;
-  width: 90%;
-  padding: 44px 10px;
+/* Mobile-first default styles (mobile styles are now overridden below) */
 
-
+.blog-heading,
+.blog-heading2,
+.blog-heading3 {
+  font-family: Poppins;
+  font-style: normal;
+  font-weight: 500;
+  letter-spacing: -0.72px;
+  background: linear-gradient(to bottom, #FFF 1.76%, #909090 98.24%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  line-height: 125%;
+  font-size: 4.2rem;
 }
 
-.blog-aplha {
+.first-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-top: 9rem;
+  padding-bottom: 4rem;
+  width: 90%;
+  margin: 10px auto;
+  gap: 20px;
+  height: 100vh;
+}
+
+.first-section-element {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.first-section-element2 {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+}
+
+.first-section-element3 {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+
+.first-section-element3-text {
   background: linear-gradient(to bottom, #2FBECE 56.52%, #2974B7 117.39%);
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   font-family: Poppins;
-  font-size: 20px;
-  font-style: normal;
+  font-size: 18px;
   font-weight: 500;
-  line-height: normal;
+  margin-right: 50px;
 }
-
-
-.blog-heading {
-
-  font-family: Poppins;
-  font-size: 104px;
-  font-style: normal;
-  font-weight: 500;
-  /* 88px */
-  letter-spacing: -3.8px;
-  background: linear-gradient(to bottom, #FFF 1.76%, #909090 98.24%);
-  background-clip: text;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  line-height: 110%;
-}
-
-.blog-heading2 {
-
-  font-family: Poppins;
-  font-size: 104px;
-  font-style: normal;
-  font-weight: 500;
-  /* 88px */
-  letter-spacing: -3.8px;
-  background: linear-gradient(to bottom, #FFF 1.76%, #909090 98.24%);
-  background-clip: text;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  line-height: 110%;
-}
-
-
-.blog-heading3 {
-
-  font-family: Poppins;
-  font-size: 104px;
-  font-style: normal;
-  font-weight: 500;
-  /* 88px */
-  letter-spacing: -3.8px;
-  background: linear-gradient(to bottom, #FFF 1.76%, #909090 98.24%);
-  background-clip: text;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  line-height: 110%;
-}
-
 
 .sub-heading-div {
   width: 100%;
   display: flex;
-  justify-content: flex-end;
-
+  justify-content: center;
+  margin-top: 20px;
 }
 
-
 .sub-heading-div2 {
-  width: 60%;
-
+  width: 100%;
 }
 
 .sub-heading {
+  text-align: center;
   color: #909090;
-  text-align: right;
   font-family: Poppins;
-  font-size: 30px;
-  font-style: normal;
+  font-size: 18px;
+  padding: 0 10px;
   font-weight: 400;
-  line-height: normal;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-end;
-  flex-wrap: wrap;
-  padding-right: 30px;
 }
 
-
-@media screen and (max-width: 640px) {
-
+/* 🔁 Mobile: force desktop layout under 640px */
+@media screen and (max-width: 749px) {
+  .blog-heading,
+  .blog-heading2,
+  .blog-heading3 {
+    font-size: 2.4rem;
+    line-height: 120%;
+    letter-spacing: -0.20px;
+  }
 
   .first-section {
     display: flex;
-    width: 100%;
-    flex-direction: column;
-    align-items: center;
-    gap: 30px;
+    margin: 10px auto;
+    gap: 60px;
+    height: 100vh;
+    padding: 200px 0px;
   }
-
-
+  
+  .first-section-element {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+  
+  .first-section-element2 {
+    display: flex;
+    flex-direction: column; 
+  }
+  
+  .first-section-element3 {
+    display: flex;
+    align-items: center;
+    justify-content: left;
+    margin-bottom: 10px;
+  }
+  
+  .first-section-element3-text {
+    font-size: 12px;
+    margin-right: 5px;
+    
+  }
+  
+  .sub-heading-div {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    
+  }
+  
   .sub-heading-div2 {
     width: 100%;
-
   }
-
+  
   .sub-heading {
-    font-size: 20px;
+    text-align: right;
+    font-size: 16px;
+    padding: 0 10px;
+    
   }
-
-  .blog-heading {
-    font-size: 36px;
-    letter-spacing: -0.72px;
-
-  }
-
-  .blog-heading2 {
-    font-size: 36px;
-    letter-spacing: -0.72px;
-
-  }
-
-  .blog-heading3 {
-    font-size: 36px;
-    letter-spacing: -0.72px;
-
-  }
-
 }
 
-@media screen and (min-width: 641px) and (max-width: 1024px) {
+/* Tablet styles */
+@media screen and (min-width: 750px) and (max-width: 1024px) {
+  .blog-heading,
+  .blog-heading2,
+  .blog-heading3 {
+    font-size: 4rem;
+    line-height: 120%;
+    letter-spacing: -0.20px;
+  }
+
+  .first-section {
+    display: flex;
+    margin: 10px auto;
+    gap: 5px;
+    height: 100vh;
+    padding: 400px 0px;
+  }
+  
+  .first-section-element {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+  
+  .first-section-element2 {
+    display: flex;
+    flex-direction: row; 
+  }
+  
+  .first-section-element3 {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    margin-bottom: 10px;
+  }
+  
+  .first-section-element3-text {
+    font-size: 15px;
+    margin-right: 10px;
+  }
+  
+  .sub-heading-div {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    
+  }
+  
+  .sub-heading-div2 {
+    width: 90%;
+  }
+  
+  .sub-heading {
+    text-align: right;
+    font-size: 18px;
+    padding: 0 10px;
+    
+  }
+}
+
+/* Desktop styles */
+@media screen and (min-width: 1025px) {
+  .blog-heading,
+  .blog-heading2,
+  .blog-heading3 {
+    font-size: 104px;
+    letter-spacing: -3.8px;
+  }
+
+  .sub-heading-div {
+    justify-content: flex-end;
+  }
 
   .sub-heading-div2 {
     width: 60%;
-
   }
 
   .sub-heading {
-    font-size: 20px;
+    font-size: 30px;
+    text-align: right;
+    padding-right: 30px;
   }
-
-
-
 }
-
-@media screen and (min-width: 1025px) {}

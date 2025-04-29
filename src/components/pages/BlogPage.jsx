@@ -65,24 +65,25 @@ export default function BlogPage() {
     <main className="h-full overflow-auto bg-black text-white">
       {/* Hero Section */}
       <section className=" first-section  "> 
-                <div className="flex flex-col items-start space-y-4  ">
-          <div className="flex items-start lg:items-center md:items-start mt-10  flex-col md:flex-row ">
-            <div className='flex items-center '>
+          <div className="first-section-element ">
+          <div className="first-section-element2 ">
+            <div className='first-section-element3 '>
             <div className="h-2 w-2 rounded-full bg-cyan-400 mr-3 "></div>
-              <span className="blog-aplha mr-15 "> Blogs</span>
+              <span className="first-section-element3-text  "> Blogs</span>
             </div>
             <h1 className='blog-heading '>
             Fresh ideas and
             </h1>           
           </div>
-            <div className=''>
+
+            <div className='first-section-element3-div '>
               <h1 className='blog-heading2 '>insights to grow</h1>
             </div>
-            <div className=''>
+            <div className='first-section-element3-div '>
               <h1 className='blog-heading3 '>your brand online</h1>
             </div>
           </div>
-            <div className="sub-heading-div   ">
+            <div className="sub-heading-div  ">
              <div className='sub-heading-div2 '>
             <p className="sub-heading">Discover the latest news, insights, and strategies for your business growth.</p>
              </div>
