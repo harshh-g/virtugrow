@@ -64,11 +64,11 @@ export default function BlogPage() {
   return (
     <main className="min-h-screen bg-black text-white">
       {/* Hero Section */}
-      <section className="py-44  px-10 w-[80%] lg:w-[90%]  mx-auto  h-[100vh] first-section  "> 
+      <section className="py-44  px-10 w-[90%]  mx-auto  h-[100vh] first-section  "> 
                 <div className="flex flex-col items-start space-y-4 ">
-          <div className="flex items-center mt-10  ml-10 ">
-            <div className="h-2 w-2 rounded-full bg-blue-400"></div>
-              <span className="text-blue-400 mr-10 text-2xl">Blogs</span>
+          <div className="flex items-center mt-10  ml-8 ">
+            <div className="h-2 w-2 rounded-full bg-blue-400 mr-3"></div>
+              <span className="text-blue-400 mr-16 text-2xl">Blogs</span>
             <h1 className='blog-heading '>
             Fresh ideas and
             </h1>           

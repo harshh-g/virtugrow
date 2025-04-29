@@ -14,7 +14,7 @@ font-style: normal;
 font-weight: 500;
  /* 88px */
 letter-spacing: -3.8px;
-background: linear-gradient(182deg, #FFF 1.76%, #909090 98.24%);
+background: linear-gradient(90deg, #FFF 1.76%, #909090 98.24%);
 background-clip: text;
 -webkit-background-clip: text;
 -webkit-text-fill-color: transparent;
@@ -29,7 +29,7 @@ line-height: 110%;
   font-weight: 500;
    /* 88px */
   letter-spacing: -3.8px;
-  background: linear-gradient(182deg, #FFF 1.76%, #909090 98.24%);
+  background: linear-gradient(190deg, #FFF 1.76%, #909090 98.24%);
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -45,7 +45,7 @@ line-height: 110%;
     font-weight: 500;
      /* 88px */
     letter-spacing: -3.8px;
-    background: linear-gradient(182deg, #FFF 1.76%, #909090 98.24%);
+    background: linear-gradient(90deg, #FFF 1.76%, #909090 98.24%);
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -62,7 +62,7 @@ line-height: 110%;
 
 
     .sub-heading-div2{
-      width: 44%;
+      width: 60%;
       
     }
 
@@ -70,7 +70,7 @@ line-height: 110%;
       color: #909090;
 text-align: right;
 font-family: Poppins;
-font-size: 24px;
+font-size: 30px;
 font-style: normal;
 font-weight: 400;
 line-height: normal;
