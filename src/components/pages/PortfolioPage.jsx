@@ -1,5 +1,4 @@
 import React, { useState, useEffect, useRef } from 'react';
-import { Link } from 'react-router-dom';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import comp1 from '../../assets/new portfolio/comp1.png';
@@ -13,6 +12,7 @@ import comp8 from '../../assets/new portfolio/comp8.png';
 import comp9 from '../../assets/new portfolio/comp9.png';
 import comp10 from '../../assets/new portfolio/comp10.png';
 import './PortfolioPage.css';
+
 
 gsap.registerPlugin(ScrollTrigger);
 

@@ -135,7 +135,7 @@ export default function BlogPage() {
       title: "This is a featured article - The most important piece of content",
       description: "Very short description of what's actually being discussed in this article, maybe the first sentences to provide a preview.",
       image: comp1,
-      link: "/blog/article-1"
+      link: "/singleblogpage"
     },
     {
       id: 2,
@@ -238,15 +238,15 @@ export default function BlogPage() {
                   <div className="md:w-1/2  p-8 flex flex-col justify-evenly">
                     <h3 className="text-4xl font-bold mb-6">{blog.title}</h3>
                     <p className="text-gray-400 mb-6">{blog.description}</p>
-                    <a 
-                      href={blog.link} 
+                    <link
+                      to={blog.link} 
                       className="inline-flex items-center text-white"
                     >
                       Read Now 
                       <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 ml-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" />
                       </svg>
-                    </a>
+                    </link>
                   </div>
                   <div className="w-full p-3  ">
                     <img 
