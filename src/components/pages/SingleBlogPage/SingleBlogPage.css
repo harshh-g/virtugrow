@@ -80,3 +80,77 @@
     mix-blend-mode:difference ;
     
 }
+
+
+
+@media screen and (max-width: 640px) {
+    .port2{
+        font-size: 40px;
+    }
+    .port{
+        font-size: 16px;
+    }
+    .btn{
+        font-size: 10px;
+    }
+    .arrow{
+        width: 8px;
+        height: 8px;
+    }
+
+    .blog-heading3 {
+        font-size: 1.6rem;
+        line-height: 120%;
+        letter-spacing: -0.20px;
+      }
+    
+
+    
+}
+
+@media screen and (min-width: 641px) and (max-width: 1024px) {
+    .port2{
+        font-size: 80px;
+    }
+    .port{
+        font-size: 20px;
+    }
+    .btn{
+        font-size: 12px;
+    }
+    .arrow{
+        width: 10px;
+        height: 10px;
+    }
+    
+    .blog-heading3 {
+        font-size: 2.4rem;
+        line-height: 120%;
+        letter-spacing: -0.20px;
+      }
+    
+    
+}
+
+@media screen and (min-width: 1025px) {
+    .port2{
+        font-size: 120px;
+    }
+    .port{
+        font-size: 24px;
+    }
+    .btn{
+        font-size: 14px;
+    }
+    .arrow{
+        width: 12px;
+        height: 12px;
+    }
+
+    .blog-heading3 {
+        font-size: 3.2rem;
+        line-height: 120%;
+        letter-spacing: -0.20px;
+      }
+    
+}

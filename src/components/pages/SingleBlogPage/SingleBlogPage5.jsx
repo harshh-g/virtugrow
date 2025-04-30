@@ -25,45 +25,43 @@ export default function SingleBlogPage5() {
   ];
 
   return (
-    <div className="bg-black/90 text-white px-4 mx-auto w-full py-40 font-sans">
+    <div className="bg-black/90 text-white px-4 lg:mx-auto md:mx-auto w-full mx-0    font-sans">
       {/* Back */}
 
-      <div className="w-[50%] mx-auto"> 
-     <button onClick={() => location(-1)}>
-     <p className="text-sm text-gray-400 mb-10 cursor-pointer">&larr; Back</p>
-      </button> 
-      
-      
+      <div className="w-full px-4 md:px-10 lg:px-0 lg:w-[50%] lg:mx-auto py-20 md:py-28 lg:py-44">
+      {/* Back Button */}
+      <button onClick={() => window.history.back()} className="mb-6 md:mb-10">
+        <p className="text-sm text-gray-400 cursor-pointer">&larr; Back</p>
+      </button>
 
       {/* Date */}
       <p className="text-xs text-gray-500 uppercase tracking-wide mb-3">Aug 29th, 2023</p>
 
       {/* Title */}
-      <h1 className="blog-heading3">
+      <h1 className="text-2xl md:text-4xl lg:text-5xl font-bold leading-tight mb-6">
         This Is The Article Name – <br />
         Headline Comes Here
       </h1>
 
       {/* Author Info */}
-      <div className="flex items-center mt-10 gap-5 mb-6">
-        <img src={comp1} alt="Author" className="w-10 h-10 rounded-full" />
+      <div className="flex items-center mt-6 md:mt-10 gap-4 md:gap-5 mb-6">
+        <img src={b2} alt="Author" className="w-10 h-10 rounded-full" />
         <div>
-          <p className="font-semibold text-white text-sm">Name Lastname</p>
+          <p className="font-semibold text-white text-sm md:text-base">Name Lastname</p>
           <p className="text-xs text-gray-400">Position @ Company</p>
         </div>
       </div>
 
       {/* Main Image */}
-      <div className="max-w-4xl w-full rounded-xl overflow-hidden shadow-[0_10px_25px_rgba(0,0,0,0.6)] mb-8">
-        <img src={b4} alt="Main" className="w-full h-[420px] object-cover rounded-2xl" />
+      <div className="w-full rounded-2xl overflow-hidden shadow-[0_10px_25px_rgba(0,0,0,0.6)] mb-8">
+        <img src={comp1} alt="Main" className="w-full h-[250px] sm:h-[350px] md:h-[420px] object-cover rounded-2xl" />
       </div>
 
       {/* Body */}
-      <div className="text-gray-300 space-y-6 max-w-4xl text-[15px] leading-relaxed">
+      <div className="text-gray-300 space-y-6 text-[15px] leading-relaxed">
         <p>
           Lorem ipsum dolor sit amet consectetur. Eros sed nisl erat nunc eget non integer et est. Orci tellus nisl
-          point tristique risus sit leo cursus. Adipiscing vitae et adipiscing bibendum adipiscing. Pellentesque
-          ipsum massa nunc commodo dignissim dolor.
+          point tristique risus sit leo cursus. Adipiscing vitae et adipiscing bibendum adipiscing.
         </p>
         <p>
           Habitanti dictumst cursus congue dictum tellus bibendum elit. Elementum adipiscing pretium vestibulum.
@@ -73,7 +71,7 @@ export default function SingleBlogPage5() {
         </p>
 
         {/* Quote */}
-        <div className="bg-[#fff]/50 backdrop-blur-2xl  p-6 rounded-lg shadow-inner italic">
+        <div className="bg-white/10 backdrop-blur-xl p-6 rounded-lg shadow-inner italic border-l-4 border-cyan-500">
           <p>
             “Here we’re going to showcase something interesting the interviewee or article author has written or said.”
           </p>
@@ -84,7 +82,7 @@ export default function SingleBlogPage5() {
           Blandit commodo sed non feugiat massa at porttitor. Risus eros mattis odio ultrices egestas.
         </p>
       </div>
-      </div>
+    </div>
 
       {/* Related Articles */}
       <div className="w-[85%] mx-auto mt-20">
