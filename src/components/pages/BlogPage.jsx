@@ -12,7 +12,7 @@ import comp7 from '../../assets/new portfolio/comp7.png';
 import comp8 from '../../assets/new portfolio/comp8.png';
 import comp9 from '../../assets/new portfolio/comp9.png';
 import comp10 from '../../assets/new portfolio/comp10.png';
-
+import { Link } from 'react-router-dom';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -21,6 +21,8 @@ export default function BlogPage() {
   const [activeCategory, setActiveCategory] = useState("Featured Works");
   const [displayedProjects, setDisplayedProjects] = useState([]);
   const portfolioRef = useRef(null);
+
+ 
 
   const portfolioData = [
     // --- Your portfolioData (same as before) ---
@@ -142,28 +144,28 @@ export default function BlogPage() {
       title: "SEO Strategies for Small Businesses in 2025",
       description: "Discover the latest SEO techniques that can help small businesses compete with larger corporations in the digital space.",
       image: comp2,
-      link: "/blog/article-2"
+      link: "/singleblogpage2"
     },
     {
       id: 3,
       title: "Social Media Trends Reshaping Marketing",
       description: "Explore how emerging social platforms and changing user behaviors are creating new opportunities for brand engagement.",
       image: comp3,
-      link: "/blog/article-3"
+      link: "/singleblogpage3"
     },
     {
       id: 4,
       title: "Website Performance: Speed vs. Features",
       description: "Finding the perfect balance between rich website functionality and the loading speeds your visitors demand.",
       image: comp4,
-      link: "/blog/article-4"
+      link: "/singleblogpage4"
     },
     {
       id: 5,
       title: "Building Brand Authority Through Content",
       description: "Learn how strategic content creation can position your company as a thought leader in your industry.",
       image: comp5,
-      link: "/blog/article-5"
+      link: "/singleblogpage5"
     }
   ];
 
@@ -238,7 +240,7 @@ export default function BlogPage() {
                   <div className="md:w-1/2  p-8 flex flex-col justify-evenly">
                     <h3 className="text-4xl font-bold mb-6">{blog.title}</h3>
                     <p className="text-gray-400 mb-6">{blog.description}</p>
-                    <link
+                    <Link
                       to={blog.link} 
                       className="inline-flex items-center text-white"
                     >
@@ -246,7 +248,7 @@ export default function BlogPage() {
                       <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 ml-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" />
                       </svg>
-                    </link>
+                    </Link>
                   </div>
                   <div className="w-full p-3  ">
                     <img 
