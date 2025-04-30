@@ -180,8 +180,6 @@ export default function ServicePage() {
              </div>
             </div>
 
-            <div className='spread-circle'>
-           </div>
         
       </section>
 

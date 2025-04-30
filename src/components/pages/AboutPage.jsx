@@ -22,8 +22,7 @@ export default function AboutPage() {
             </h1>           
           </div>
            
-           <div className='spread-circle'>
-           </div>
+           
 
             <div className='first-section-element3-div '>
               <h1 className='blog-heading2 '>grow online with</h1>
@@ -38,8 +37,7 @@ export default function AboutPage() {
              </div>
             </div>
 
-            <div className='spread-circle'>
-           </div>
+           
         
       </section>
 

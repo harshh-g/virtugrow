@@ -211,19 +211,18 @@ export default function BlogPage() {
              </div>
             </div>
 
-            <div className='spread-circle'>
-            </div>
+           
       </section>
       
       {/* Featured Blogs Slider */}
     
      
-        <section className="py-20 px-4 h-full md:px-8 w-[85%]  mx-auto">
+        <section className="py-20  h-full px-8 w-[90%] overflow-hidden mx-auto">
         <h2 className="text-blue-400 text-2xl mb-10">Featured Blogs</h2>
         
-        <div className="relative overflow-hidden lg:overflow-visible md:overflow-visible  " ref={sliderRef}>
+        <div className="relative overflow-visible " ref={sliderRef}>
           <div 
-            className="flex transition-transform duration-700 ease-out" 
+            className="flex transition-transform duration-700 ease-out w-[100%]" 
             style={{ 
               width: `${blogs.length * 100}%`,
               transform: `translateX(-${currentSlide * (100 / blogs.length)}%)`
@@ -232,10 +231,10 @@ export default function BlogPage() {
             {blogs.map((blog, index) => (
               <div 
                 key={blog.id}
-                className="w-full "
+                className=""
                 style={{ flex: `0 0 ${100 / blogs.length}%` }}
               >
-                <div className="flex flex-col md:flex-row bg-gray-900 h-[350px] rounded-xl overflow-hidden mx-2">
+                <div className="flex flex-col md:flex-row bg-gray-900 h-[350px] w-[95%] rounded-xl overflow-hidden mx-2">
                   <div className="md:w-1/2  p-8 flex flex-col justify-evenly">
                     <h3 className="text-4xl font-bold mb-6">{blog.title}</h3>
                     <p className="text-gray-400 mb-6">{blog.description}</p>
@@ -249,11 +248,11 @@ export default function BlogPage() {
                       </svg>
                     </a>
                   </div>
-                  <div className="md:w-1/2 ">
+                  <div className="w-full p-3  ">
                     <img 
                       src={blog.image} 
                       alt={blog.title} 
-                      className="h-full w-full object-cover object-center"
+                      className="h-full w-full object-cover rounded-2xl p-2 object-center"
                     />
                   </div>
                 </div>
@@ -308,8 +307,7 @@ export default function BlogPage() {
       <section className="container mx-auto px-4  py-10 portfolio-grid">
         
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-        <div className='spread-circle'>
-        </div>
+        
           {displayedProjects.map(project => (
             <div key={project.id} className="portfolio-grid-item group relative overflow-hidden rounded-lg">
               <div className="mt-4 bg-transparent">

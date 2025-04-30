@@ -224,16 +224,3 @@
 }
 
 
-.spread-circle {
-  position: absolute;
-  top: 40%;
-  left: 83%;
-  width: 500px;
-  height: 500px;
-  transform: translate(-1%, -30%);
-  background: radial-gradient(circle, #2974B7 0%, transparent 90%);
-  pointer-events: none;
-  z-index: 0;
-  filter: blur(300px);
-  border-radius: 350px;
-}

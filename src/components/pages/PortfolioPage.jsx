@@ -196,8 +196,8 @@ export default function PortfolioPage() {
       {/* CTA Section */}
       <section className="container mx-auto h-[400px] px-4 py-8 ">
     <div className="bg-gradient-to-b from-[#001a29]/80 to-[#000a14]/80 h-full flex flex-col justify-center items-center rounded-lg p-4 md:p-8 text-center">
-      <p className="text-sm port pb-7 ">HAVE A PROJECT IN MIND?</p>
-      <h2 className="text-3xl md:text-4xl lg:text-5xl xl:text-6xl port2">LET'S WORK</h2>
+      <p className="port pb-7 ">HAVE A PROJECT IN MIND?</p>
+      <h2 className=" port2">LET'S WORK</h2>
       <button className="btn px-4 md:px-6 py-2 mt-5  flex items-center mx-auto">
         Contact Us
         <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 12 12" fill="none" className='arrow'>
