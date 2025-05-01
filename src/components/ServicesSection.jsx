@@ -6,6 +6,8 @@ import bg3 from '../assets/icons/3.gif';
 import bg4 from '../assets/icons/4.gif';
 import bg5 from '../assets/icons/5.gif';
 import bg6 from '../assets/icons/6.gif';
+import { Link } from 'react-router-dom';
+import { ArrowRight } from 'lucide-react';
 
 const ServiceCard = ({ icon, title, description }) => {
   return (
@@ -142,27 +144,22 @@ const ServiceSection = () => {
             </motion.div>
           ))}
         </motion.div>
-        <div className="flex justify-center mt-12">
-          <motion.button 
-            className="contact-btn flex items-center gap-10"
-            whileHover={{ 
-              scale: 1.05, 
-              boxShadow: "0px 5px 15px rgba(26, 156, 156, 0.3)" 
-            }}
-            whileTap={{ scale: 0.98 }}
-            transition={{ type: "spring", stiffness: 400, damping: 10 }}
-          >
-            View More
-            <motion.div
-              animate={{ x: [0, 3, 0] }}
-              transition={{ duration: 1.5, repeat: Infinity }}
-            >
-              <svg className="w-5 h-5 text-white fill-current  bg-blue-500 " viewBox="0 0 24 24" fill="currentColor">
-                <path d="M12 2c5.514 0 10 4.486 10 10s-4.486 10-10 10-10-4.486-10-10 4.486-10 10-10zm0 18c4.411 0 8-3.589 8-8s-3.589-8-8-8-8 3.589-8 8 3.589 8 8 8zm-1-13l6 5-6 5v-10z" />
-              </svg>
-            </motion.div>
-          </motion.button>
-        </div>
+        <div className="w-full flex justify-center">
+ 
+ <Link to="/contactpage" className='group relative overflow-hidden flex items-center lg:mt-12 lg:px-4 lg:py-3 md:mt-12 md:px-4 md:py-3 mt-7 px-4  py-3  text-black rounded-3xl bg-[linear-gradient(182deg,_#FFF_1.76%,_rgba(255,255,255,0.8)_98.24%)] transition-all duration-500 ease-in'> 
+ 
+    {/* Background overlay that animates on hover */}
+    <span className="absolute inset-0 bg-gradient-to-b from-[#2FBECE] group-hover:border-white group-hover:border-2 group-hover:rounded-full to-[#2974B7]  from-[56.52%] to-[117.39%] transform translate-x-full group-hover:translate-x-0 transition-transform duration-300 ease z-0"></span>
+
+    {/* Button content on top of the animated background */}
+    <span className="relative z-10 flex items-center text-black group-hover:text-white transition-colors duration-300">
+      <span className="mr-3 leading-tight">View More</span>
+      <span className="w-6 h-6 flex items-center justify-center bg-gradient-to-b from-[#2FBECE] to-[#2974B7] from-[56.52%] to-[117.39%] rounded-full transition-all duration-300 group-hover:bg-transparent">
+        <ArrowRight size={20} className="text-white transition-transform duration-300 ease-in-out group-hover:rotate-0 -rotate-45 font-extralight" />
+      </span>
+    </span>
+</Link>
+</div>
       </div>
     </div>
   );
