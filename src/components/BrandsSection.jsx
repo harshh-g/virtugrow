@@ -1,15 +1,16 @@
 import React from "react";
 import Marquee from "react-fast-marquee";
 
-import ava from '../assets/clients/avalogo.png';
-import AuSmallFin from '../assets/clients/AuSmallFin.png';
-import healthism from '../assets/clients/healthism.png';
-import ludhiyanalogo from '../assets/clients/ludhiyanaHome.png';
-import megalogo from '../assets/clients/megaHandloom.png';
-import comfortHome from '../assets/clients/comfortlogo.png';
-import cngCare from '../assets/clients/cng.png';
-import yesBank from '../assets/clients/Yesbank.png';
-import phoneMytra from '../assets/clients/phoneMytra.png';
+import ava from '../assets/clients/A.PNG';
+import AuSmallFin from '../assets/clients/AV.PNG';
+import healthism from '../assets/clients/H.PNG';
+import ludhiyanalogo from '../assets/clients/LU.PNG';
+import megalogo from '../assets/clients/MA.PNG';
+import comfortHome from '../assets/clients/CM.PNG';
+import cngCare from '../assets/clients/C.PNG';
+import yesBank from '../assets/clients/Y.PNG';
+import phoneMytra from '../assets/clients/PH.PNG';
+
 
 const brands = [
   { name: 'AVA', logo: ava },
@@ -34,13 +35,13 @@ const BrandsSection = () => {
     WebkitTextFillColor: 'transparent',
     
   }}>Brands we have worked with</h2>
-      <Marquee speed={50} gradient={false} pauseOnHover={true}>
+      <Marquee speed={50} gradient={false} >
         {brands.map((brand, index) => (
           <div key={index} style={{ margin: '0 40px', display: 'flex', alignItems: 'center' }}>
             <img
               src={brand.logo}
               alt={brand.name}
-              style={{ height: '60px', objectFit: 'contain' }}
+              style={{ height: '150px', objectFit: 'cover', marginRight: '20px' }}
               title={brand.name}
             />
           </div>
