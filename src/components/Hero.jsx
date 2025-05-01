@@ -85,9 +85,12 @@ const Hero = () => {
       {/* Footer */}
       <footer className="hero-footer">
         <span className="footer-year">Since-Y:2024</span>
-        <span className="footer-icon relative   h-8 w-5 border border-white rounded-full flex items-start justify-center overflow-hidden">
-  <span className="absolute top-0  w-1 h-2 bg-white rounded-3xl animate-[scrollMouse_1.5s_ease-in-out_infinite]" />
+        <span>
+
+        <span className="footer-icon relative   h-8 w-5 border border-white rounded-full overflow-hidden">
+  <span className="absolute top-0  w-1 h-2 bg-white rounded-3xl animate-[scrollMouse_2.6s_ease-in-out_infinite]" />
 </span>
+        </span>
 
         <span className="footer-address">1/74, Vivek Khand 2,Gomti Nagar, Lucknow</span>
       </footer>
