@@ -18,7 +18,7 @@ const Hero = () => {
     
     // 🎥 Set playback speed slightly slower
     if (videoRef.current) {
-      videoRef.current.playbackRate = 0.75;
+      videoRef.current.playbackRate = 0.90;
     }
 
     if (title && subtitle) {
@@ -67,7 +67,7 @@ const Hero = () => {
         {/* Updated Contact Button with Animation */}
         <div className="w-full flex justify-center">
  
- <Link to="/contactpage"> <button className="group relative overflow-hidden flex items-center mt-12 px-4 py-3 text-black rounded-3xl bg-[linear-gradient(182deg,_#FFF_1.76%,_rgba(255,255,255,0.8)_98.24%)] transition-all duration-500 ease-in">
+ <Link to="/contactpage"> <button className="group relative overflow-hidden flex items-center lg:mt-12 lg:px-4 lg:py-3 md:mt-12 md:px-4 md:py-3 mt-7 px-4  py-3  text-black rounded-3xl bg-[linear-gradient(182deg,_#FFF_1.76%,_rgba(255,255,255,0.8)_98.24%)] transition-all duration-500 ease-in">
     {/* Background overlay that animates on hover */}
     <span className="absolute inset-0 bg-gradient-to-b from-[#2FBECE] group-hover:border-white group-hover:border-2 group-hover:rounded-full to-[#2974B7] group-hover:p-5 from-[56.52%] to-[117.39%] transform translate-x-full group-hover:translate-x-0 transition-transform duration-300 ease z-0"></span>
 
@@ -80,20 +80,27 @@ const Hero = () => {
     </span>
   </button></Link>
 </div>
-
-
-
-
       </div>
       
       {/* Footer */}
       <footer className="hero-footer">
         <span className="footer-year">Since-Y:2024</span>
-        <span className="footer-icon">
-          <MouseIcon size={30} />
-        </span>
+        <span className="footer-icon relative   h-8 w-5 border border-white rounded-full flex items-start justify-center overflow-hidden">
+  <span className="absolute top-0  w-1 h-2 bg-white rounded-3xl animate-[scrollMouse_1.5s_ease-in-out_infinite]" />
+</span>
+
         <span className="footer-address">1/74, Vivek Khand 2,Gomti Nagar, Lucknow</span>
       </footer>
+
+      <style>
+  {`
+    @keyframes scrollMouse {
+      0% { transform: translateY(0); opacity: 1; }
+      50% { transform: translateY(20px); opacity: 0.7; }
+      100% { transform: translateY(0); opacity: 1; }
+    }
+  `}
+</style>
     </section>
   );
 };
