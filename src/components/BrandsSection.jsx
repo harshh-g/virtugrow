@@ -1,8 +1,8 @@
 import React from "react";
 import Marquee from "react-fast-marquee";
 
-import ava from '../assets/clients/A.PNG';
-import AuSmallFin from '../assets/clients/AV.PNG';
+import ava from '../assets/clients/AV.PNG';
+import AuSmallFin from '../assets/clients/A.PNG';
 import healthism from '../assets/clients/H.PNG';
 import ludhiyanalogo from '../assets/clients/LU.PNG';
 import megalogo from '../assets/clients/MA.PNG';
