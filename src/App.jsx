@@ -13,6 +13,7 @@ import SingleBlogPage2 from './components/pages/SingleBlogPage/SingleBlogPage2';
 import SingleBlogPage3 from './components/pages/SingleBlogPage/SingleBlogPage3';
 import SingleBlogPage4 from './components/pages/SingleBlogPage/SingleBlogPage4';
 import SingleBlogPage5 from './components/pages/SingleBlogPage/SingleBlogPage5';
+import ContactPage from './components/pages/ContactPage';
 
 const App = () => {
     
@@ -29,6 +30,7 @@ const App = () => {
       <Route path="/singleblogpage3" element={<SingleBlogPage3 />} />
       <Route path="/singleblogpage4" element={<SingleBlogPage4 />} />
       <Route path="/singleblogpage5" element={<SingleBlogPage5 />} />
+      <Route path="/contactpage" element={<ContactPage />} />
 
     </Routes>
     <Footer />
