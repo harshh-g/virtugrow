@@ -10,25 +10,27 @@ import { Link } from 'react-router-dom';
 import { ArrowRight } from 'lucide-react';
 
 const ServiceCard = ({ icon, title, description }) => {
+  
   return (
     <motion.div 
-      className="bg-gray-900 rounded-lg p-8 flex flex-col items-center transition-all duration-300"
+      className="rounded-lg p-8 flex flex-col items-center transition-all duration-300 border border-white/50 bg-white/5 backdrop-blur-md"
       whileHover={{ 
         y: -10,
-        boxShadow: '0 10px 20px rgba(26, 156, 156, 0.2)',
-        backgroundColor: 'rgba(26, 27, 32, 0.95)',
-        scale: 1.02
+        scale: 1.03,
+        backgroundColor: "rgba(255, 255, 255, 0.1)",
+        backdropFilter: "blur(15px)",
       }}
-      transition={{ type: "spring", stiffness: 300 }}
+      transition={{ type: "spring", stiffness: 200, damping: 15 }}
     >
-      <div className="bg-white rounded-full p-4 mb-4 transition-all duration-300 relative group-hover:shadow-lg">
+      <div className="bg-white rounded-full p-4 mb-4 shadow-md">
         {icon}
       </div>
       <h3 className="text-white text-xl font-semibold mb-4 text-center">{title}</h3>
-      <p className="text-gray-400 text-center text-sm">{description}</p>
+      <p className="text-gray-300 text-center text-sm">{description}</p>
     </motion.div>
   );
-};
+  };
+ 
 
 const ServiceSection = () => {
   const services = [

@@ -1,7 +1,7 @@
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
-import 'swiper/css/pagination';
-import { Pagination, Autoplay } from 'swiper/modules';;
+import 'swiper/css/pagination'; // You can remove this import if you're not using pagination
+import { Autoplay } from 'swiper/modules';
 
 const testimonials = [
   {
@@ -48,9 +48,8 @@ const testimonials = [
   }
 ];
 
-
 const TestimonialCard = ({ quote, name, role, image }) => (
-  <div className="bg-white/90 backdrop-blur-2xl rounded-2xl p-10 shadow-xl flex flex-col w-[95%] justify-evenly h-full">
+  <div className="bg-white/90 backdrop-blur-2xl rounded-2xl p-10 shadow-xl flex flex-col w-[95%] justify-evenly h-[300px]">
     <div className="text-3xl text-[#3763B6]">“</div>
     <p className="text-gray-800 text-lg mb-6">{quote}</p>
     <div className="flex items-center gap-3">
@@ -62,17 +61,18 @@ const TestimonialCard = ({ quote, name, role, image }) => (
     </div>
   </div>
 );
+
 export default function TestimonialsSection() {
   return (
-    <div className="bg-[#F0F0F0] h-screen py-10">
-      <h2 className="text-base md:base lg:base font-bold mb-2 bg-gradient-to-b from-[#2FBECE] to-[#2974B7] bg-clip-text text-transparent text-center">Testimonials</h2>
+    <div className="bg-[#F0F0F0] py-10">
+      <h2 className="text-base md:text-base lg:text-base font-bold mb-2 bg-gradient-to-b from-[#2FBECE] to-[#2974B7] bg-clip-text text-transparent text-center">Testimonials</h2>
       <p className="text-lg md:text-2xl text-black leading-relaxed tracking-[2px] font-bold text-center mb-11">Hear from Our Clients</p>
 
-
-<Swiper
-        modules={[Pagination, Autoplay]}
-        pagination={{ clickable: true }}
-        autoplay={{ delay: 3000 }}
+      {/* First Slider */}
+      <Swiper
+        modules={[Autoplay]}
+        autoplay={{ delay: 3000, disableOnInteraction: false }}
+        speed={900}
         breakpoints={{
           640: { slidesPerView: 1, spaceBetween: 20 },
           768: { slidesPerView: 2, spaceBetween: 20 },
@@ -80,18 +80,20 @@ export default function TestimonialsSection() {
         }}
         className="px-4"
       >
-        {Array(6).fill(testimonials[0]).map((testimonial, index) => (
+        {testimonials.map((testimonial, index) => (
           <SwiperSlide key={index}>
             <TestimonialCard {...testimonial} />
           </SwiperSlide>
         ))}
       </Swiper>
-  
-  <div className='mt-15'></div>
+
+      <div className="mt-5" />
+
+      {/* Second Slider */}
       <Swiper
-        modules={[Pagination, Autoplay]}
-        pagination={{ clickable: true }}
-        autoplay={{ delay: 1500 }}
+        modules={[Autoplay]}
+        autoplay={{ delay: 2000, disableOnInteraction: false }}
+        speed={600}
         breakpoints={{
           640: { slidesPerView: 1, spaceBetween: 20 },
           768: { slidesPerView: 2, spaceBetween: 20 },
@@ -99,15 +101,12 @@ export default function TestimonialsSection() {
         }}
         className="px-9"
       >
-        {Array(6).fill(testimonials[0]).map((testimonial, index) => (
+        {testimonials.map((testimonial, index) => (
           <SwiperSlide key={index}>
             <TestimonialCard {...testimonial} />
           </SwiperSlide>
         ))}
       </Swiper>
-
-
-      
     </div>
   );
 }
