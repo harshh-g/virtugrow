@@ -26,10 +26,11 @@ const brands = [
 
 const BrandsSection = () => {
   return (
-    <section className="brands-section" style={{ padding: '2rem 0', backgroundColor: 'white' }}>
+    <section className="brands-section" style={{ padding: '0 0', backgroundColor: 'white' }}>
       <h2 className="lg:text-3xl sm:text-xl md:text-2xl font-bold" style={{
     textAlign: 'center',
-    marginBottom: '3rem',
+    marginTop: '2rem',
+    marginBottom: '1rem',
     background: 'linear-gradient(to right, #2FBECE, #2974B7)',
     WebkitBackgroundClip: 'text',
     WebkitTextFillColor: 'transparent',
