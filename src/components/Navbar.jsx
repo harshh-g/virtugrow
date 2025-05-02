@@ -39,42 +39,40 @@ useEffect(() => {
 
   return (
     <>
-      <header className="fixed top-5 left-1/2 transform -translate-x-1/2 z-50 transition-all duration-300 lg:w-[580px] md:w-[560px] w-[400px] h-[67px] bg-black/90 backdrop-blur-2xl    rounded-full px-8 py-5 flex justify-between items-center">
-        <div className="flex items-center">
-          <Link to="/" className="flex items-center">
+      <header className={`fixed top-5 left-1/2 transform -translate-x-1/2 z-50 transition-all duration-300 ${showContactButton ? 'lg:w-[740px]' : 'lg:w-[580px]'}  md:w-[560px] w-[400px] h-[67px] bg-black/90 backdrop-blur-2xl    rounded-full px-8 py-5 flex justify-between items-center`}>
+        <div className="flex items-center justify-center">
+          <Link to="/" className="flex items-center ">
             <img src={logo} className="w-14 h-16" alt="Logo" />
           </Link>
         </div>
         
         {/* Desktop Navigation */}
-        <nav className="hidden md:flex">
-          <ul className="flex space-x-7">
+        <nav className="hidden md:flex items-center ">
+          <ul className="flex space-x-7 items-center ">
             <li><Link to="/" className="text-white hover:text-cyan-400 text-lg transition-colors">Home</Link></li>
             <li><Link to="/servicepage" className="text-gray-300 hover:text-cyan-400 text-lg transition-colors">Services</Link></li>
             <li><Link to="/portfoliopage" className="text-gray-300 hover:text-cyan-400 text-lg transition-colors">Portfolio</Link></li>
             <li><Link to="/about" className="text-gray-300 hover:text-cyan-400 text-lg transition-colors">About Us</Link></li>
             <li><Link to="/blog" className="text-gray-300 hover:text-cyan-400 text-lg transition-colors">Blog</Link></li>
             
-          </ul>
-        
-        </nav>
-        {showContactButton && (
-  <Link
+        {showContactButton && (<li><Link
     to="/contactpage"
-    className="fixed top-1 -right-50  group overflow-hidden flex items-center justify-center px-5 py-4 text-white rounded-full bg-black  border-2 border-cyan-400/60 transition-all duration-500 ease-in shadow-lg invisible md:invisible lg:visible"
+    className="relative top-0 -right-6  group overflow-hidden flex items-center justify-center px-4 py-3 text-white rounded-full bg-black  border-2 border-cyan-400/60 transition-all duration-500 ease-in shadow-lg invisible md:invisible lg:visible"
   >
     {/* Background overlay */}
     <span className="absolute inset-0 bg-gradient-to-b from-[#2FBECE] to-[#2974B7] group-hover:border-white group-hover:border-2 group-hover:rounded-full transform translate-x-full group-hover:translate-x-0 transition-transform duration-300 ease z-0"></span>
 
     {/* Button content */}
-    <span className="relative z-10 flex items-center text-white group-hover:text-white transition-colors duration-300 text-sm">
+    <span className="relative z-10 flex items-center  text-white group-hover:text-white transition-colors duration-300 text-sm">
       <span className="mr-3 text-[16px]">Contact Us</span>
       <span className="w-5 h-5 flex items-center justify-center bg-gradient-to-b from-[#2FBECE] to-[#2974B7] rounded-full group-hover:bg-transparent transition-all duration-300">
         <ArrowRight size={16} className="text-white transition-transform duration-300 ease-in-out group-hover:rotate-0 -rotate-45" />
       </span>
     </span>
-  </Link>
-)}
+  </Link></li>)}
+          </ul>
+        
+        </nav>
 
         
         {/* Mobile Menu Button - Toggle between hamburger and X */}
