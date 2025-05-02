@@ -1,9 +1,25 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import logo from '../assets/logo.png';
+import { ArrowRight} from 'lucide-react';
 
 const Navbar = () => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const [showContactButton, setShowContactButton] = useState(false);
+
+useEffect(() => {
+  const handleScroll = () => {
+    if (window.scrollY > window.innerHeight) {
+      setShowContactButton(true);
+    } else {
+      setShowContactButton(false);
+    }
+  };
+
+  window.addEventListener('scroll', handleScroll);
+  return () => window.removeEventListener('scroll', handleScroll);
+}, []);
+
   
   // Close mobile menu when clicking outside or on a link
   useEffect(() => {
@@ -38,8 +54,28 @@ const Navbar = () => {
             <li><Link to="/portfoliopage" className="text-gray-300 hover:text-cyan-400 text-lg transition-colors">Portfolio</Link></li>
             <li><Link to="/about" className="text-gray-300 hover:text-cyan-400 text-lg transition-colors">About Us</Link></li>
             <li><Link to="/blog" className="text-gray-300 hover:text-cyan-400 text-lg transition-colors">Blog</Link></li>
+            
           </ul>
+        
         </nav>
+        {showContactButton && (
+  <Link
+    to="/contactpage"
+    className="fixed top-1 -right-60 z-40 group overflow-hidden flex items-center justify-center px-5 py-4 text-black rounded-full bg-[linear-gradient(182deg,_#FFF_1.76%,_rgba(255,255,255,0.8)_98.24%)] transition-all duration-500 ease-in shadow-lg"
+  >
+    {/* Background overlay */}
+    <span className="absolute inset-0 bg-gradient-to-b from-[#2FBECE] to-[#2974B7] group-hover:border-white group-hover:border-2 group-hover:rounded-full transform translate-x-full group-hover:translate-x-0 transition-transform duration-300 ease z-0"></span>
+
+    {/* Button content */}
+    <span className="relative z-10 flex items-center text-black group-hover:text-white transition-colors duration-300 text-sm">
+      <span className="mr-2 text-xl">Contact Us</span>
+      <span className="w-5 h-5 flex items-center justify-center bg-gradient-to-b from-[#2FBECE] to-[#2974B7] rounded-full group-hover:bg-transparent transition-all duration-300">
+        <ArrowRight size={16} className="text-white transition-transform duration-300 ease-in-out group-hover:rotate-0 -rotate-45" />
+      </span>
+    </span>
+  </Link>
+)}
+
         
         {/* Mobile Menu Button - Toggle between hamburger and X */}
         <button
