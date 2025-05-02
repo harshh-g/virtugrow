@@ -14,10 +14,12 @@ import SingleBlogPage3 from './components/pages/SingleBlogPage/SingleBlogPage3';
 import SingleBlogPage4 from './components/pages/SingleBlogPage/SingleBlogPage4';
 import SingleBlogPage5 from './components/pages/SingleBlogPage/SingleBlogPage5';
 import ContactPage from './components/pages/ContactPage';
+import ScrollToTop from './ScrollToTop';
 
 const App = () => {
     
   return (<>
+  <ScrollToTop/>
       <Navbar />
     <Routes>
       <Route path="/" element={<Home />} />
