@@ -39,7 +39,7 @@ useEffect(() => {
 
   return (
     <>
-      <header className="fixed top-5 left-1/2 transform -translate-x-1/2 z-50 transition-all duration-300 lg:w-[580px] md:w-[560px] w-[400px] h-[72px] bg-black/90 backdrop-blur-2xl   rounded-full px-8 py-5 flex justify-between items-center">
+      <header className="fixed top-5 left-1/2 transform -translate-x-1/2 z-50 transition-all duration-300 lg:w-[580px] md:w-[560px] w-[400px] h-[67px] bg-black/90 backdrop-blur-2xl    rounded-full px-8 py-5 flex justify-between items-center">
         <div className="flex items-center">
           <Link to="/" className="flex items-center">
             <img src={logo} className="w-14 h-16" alt="Logo" />
@@ -61,7 +61,7 @@ useEffect(() => {
         {showContactButton && (
   <Link
     to="/contactpage"
-    className="fixed top-2 -right-50  group overflow-hidden flex items-center justify-center px-5 py-4 text-white rounded-full bg-black  border-2 border-cyan-400/60 transition-all duration-500 ease-in shadow-lg invisible md:invisible lg:visible"
+    className="fixed top-1 -right-50  group overflow-hidden flex items-center justify-center px-5 py-4 text-white rounded-full bg-black  border-2 border-cyan-400/60 transition-all duration-500 ease-in shadow-lg invisible md:invisible lg:visible"
   >
     {/* Background overlay */}
     <span className="absolute inset-0 bg-gradient-to-b from-[#2FBECE] to-[#2974B7] group-hover:border-white group-hover:border-2 group-hover:rounded-full transform translate-x-full group-hover:translate-x-0 transition-transform duration-300 ease z-0"></span>
