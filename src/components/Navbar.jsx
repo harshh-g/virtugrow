@@ -39,7 +39,7 @@ useEffect(() => {
 
   return (
     <>
-      <header className="fixed top-5 left-1/2 transform -translate-x-1/2 z-50 transition-all duration-300 lg:w-[580px] md:w-[560px] w-[400px] h-[72px] bg-balck/90 backdrop-blur-2xl   rounded-full px-8 py-5 flex justify-between items-center">
+      <header className="fixed top-5 left-1/2 transform -translate-x-1/2 z-50 transition-all duration-300 lg:w-[580px] md:w-[560px] w-[400px] h-[72px] bg-black/90 backdrop-blur-2xl   rounded-full px-8 py-5 flex justify-between items-center">
         <div className="flex items-center">
           <Link to="/" className="flex items-center">
             <img src={logo} className="w-14 h-16" alt="Logo" />
@@ -68,7 +68,7 @@ useEffect(() => {
 
     {/* Button content */}
     <span className="relative z-10 flex items-center text-black group-hover:text-white transition-colors duration-300 text-sm">
-      <span className="mr-3 text-[18px]">Contact Us</span>
+      <span className="mr-3 text-[16px]">Contact Us</span>
       <span className="w-5 h-5 flex items-center justify-center bg-gradient-to-b from-[#2FBECE] to-[#2974B7] rounded-full group-hover:bg-transparent transition-all duration-300">
         <ArrowRight size={16} className="text-white transition-transform duration-300 ease-in-out group-hover:rotate-0 -rotate-45" />
       </span>
