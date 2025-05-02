@@ -31,7 +31,7 @@ const StorySection = () => {
   
       {/* Right: Description */}
       <div className="lg:w-[30%] md:w-full flex items-center md:pr-4 pr-0 lg:pr-11">
-        <p className="text-lg  md:text-left text-left">
+        <p className="text-sm  md:text-left text-left lg:text-xl md:text-lg ">
           Hi, we’re <span className="font-semibold text-gray-900 leading-[34px]">Virtugrow Digital 🚀</span>. 
           We craft digital solutions to grow your brand. From web development to UX/UI design and marketing,
           our team delivers impactful results that matter.
