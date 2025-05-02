@@ -113,7 +113,7 @@ const ServiceSection = () => {
   };
 
   return (
-    <div className="bg-linear-to-r from-[#63aeae] to-[#817d9d] py-16 px-4">
+    <div className="bg-black py-16 px-4">
       <div className="container mx-auto">
         <motion.div 
           className="text-center mb-12"
@@ -121,8 +121,8 @@ const ServiceSection = () => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}
         >
-          <h2 className="text-teal-400 text-lg mb-2">Our Services</h2>
-          <h1 className="text-white text-4xl font-bold">Our Palette Of Expertise</h1>
+          <h2 className="text-base md:base lg:base font-bold mb-2 bg-gradient-to-b from-[#2FBECE] to-[#2974B7] bg-clip-text text-transparent">Our Services</h2>
+          <h1 className="text-lg md:text-2xl text-white leading-relaxed tracking-[2px] font-bold ">Our Palette Of Expertise</h1>
         </motion.div>
         <motion.div 
           className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"
@@ -146,7 +146,7 @@ const ServiceSection = () => {
         </motion.div>
         <div className="w-full flex justify-center">
  
- <Link to="/contactpage" className='group relative overflow-hidden flex items-center lg:mt-12 lg:px-4 lg:py-3 md:mt-12 md:px-4 md:py-3 mt-7 px-4  py-3  text-black rounded-3xl bg-[linear-gradient(182deg,_#FFF_1.76%,_rgba(255,255,255,0.8)_98.24%)] transition-all duration-500 ease-in'> 
+      <Link to="/contactpage" className='group relative overflow-hidden flex items-center lg:mt-12 lg:px-4 lg:py-3 md:mt-12 md:px-4 md:py-3 mt-7 px-4  py-3  text-black rounded-3xl bg-[linear-gradient(182deg,_#FFF_1.76%,_rgba(255,255,255,0.8)_98.24%)] transition-all duration-500 ease-in'> 
  
     {/* Background overlay that animates on hover */}
     <span className="absolute inset-0 bg-gradient-to-b from-[#2FBECE] group-hover:border-white group-hover:border-2 group-hover:rounded-full to-[#2974B7]  from-[56.52%] to-[117.39%] transform translate-x-full group-hover:translate-x-0 transition-transform duration-300 ease z-0"></span>
@@ -158,8 +158,9 @@ const ServiceSection = () => {
         <ArrowRight size={20} className="text-white transition-transform duration-300 ease-in-out group-hover:rotate-0 -rotate-45 font-extralight" />
       </span>
     </span>
-</Link>
-</div>
+      </Link>
+        </div>
+
       </div>
     </div>
   );
