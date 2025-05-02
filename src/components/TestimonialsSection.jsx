@@ -1,10 +1,7 @@
 import { Swiper, SwiperSlide } from 'swiper/react';
-import { Pagination, Navigation, Autoplay, EffectFade } from 'swiper/modules';
 import 'swiper/css';
 import 'swiper/css/pagination';
-import 'swiper/css/navigation';
-import 'swiper/css/effect-fade';
-import { motion } from 'framer-motion';
+import { Pagination, Autoplay } from 'swiper/modules';;
 
 const testimonials = [
   {
@@ -39,53 +36,65 @@ const testimonials = [
   }
 ];
 
+const TestimonialCard = ({ quote, name, title, avatar }) => (
+  <div className="bg-white/90 backdrop-blur-2xl rounded-2xl p-10 shadow-xl flex flex-col w-[95%] justify-evenly  h-full">
+    <div className="text-3xl text-[#3763B6]">“</div>
+    <p className="text-gray-800 text-lg mb-6">{quote}</p>
+    <div className="flex items-center gap-3">
+      <img src={avatar} alt={name} className="w-10 h-10 rounded-full object-cover" />
+      <div>
+        <p className="font-semibold">{name}</p>
+        <p className="text-sm text-gray-500">{title}</p>
+      </div>
+    </div>
+  </div>
+);
 export default function TestimonialsSection() {
   return (
-    <div className="bg-gradient-to-br from-white via-gray-100 to-white py-16 px-4 sm:px-6 lg:px-8 relative z-10 overflow-hidden">
-      <h2 className="text-center text-sky-500 text-sm font-semibold uppercase mb-2 tracking-widest">Testimonials</h2>
-      <h3 className="text-4xl md:text-5xl text-center font-extrabold text-gray-900 mb-16">What Our Clients Say</h3>
+    <div className="bg-[#F0F0F0] h-screen py-16">
+      <h2 className="text-base md:base lg:base font-bold mb-2 bg-gradient-to-b from-[#2FBECE] to-[#2974B7] bg-clip-text text-transparent text-center">Testimonials</h2>
+      <p className="text-lg md:text-2xl text-black leading-relaxed tracking-[2px] font-bold text-center mb-11">Hear from Our Clients</p>
 
-      <Swiper
-        modules={[Pagination, Navigation, Autoplay, EffectFade]}
-        effect="fade"
-        fadeEffect={{ crossFade: true }}
-        spaceBetween={30}
-        slidesPerView={1}
-        autoplay={{ delay: 4000, disableOnInteraction: false }}
+
+<Swiper
+        modules={[Pagination, Autoplay]}
         pagination={{ clickable: true }}
-        navigation
-        className="max-w-5xl mx-auto"
+        autoplay={{ delay: 3000 }}
+        breakpoints={{
+          640: { slidesPerView: 1, spaceBetween: 20 },
+          768: { slidesPerView: 2, spaceBetween: 20 },
+          1024: { slidesPerView: 3, spaceBetween: 30 },
+        }}
+        className="px-4"
       >
-        {testimonials.map((testimonial, index) => (
+        {Array(6).fill(testimonials[0]).map((testimonial, index) => (
           <SwiperSlide key={index}>
-            <motion.div
-              initial={{ opacity: 0, y: 40 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.7, delay: index * 0.1, ease: 'easeOut' }}
-              viewport={{ once: true }}
-              className="relative bg-white/60 backdrop-blur-lg border border-white/30 shadow-xl rounded-3xl p-8 md:p-10 flex flex-col gap-6 mx-auto max-w-xl"
-            >
-              <div className="absolute -top-5 -left-5 text-sky-400 text-7xl font-serif opacity-30 pointer-events-none">“</div>
-
-              <p className="text-lg md:text-xl text-gray-700 font-medium leading-relaxed">
-                {testimonial.quote}
-              </p>
-
-              <div className="flex items-center gap-4 pt-4 border-t border-gray-200">
-                <img
-                  className="w-12 h-12 md:w-14 md:h-14 rounded-full border-2 border-sky-400"
-                  src={testimonial.image}
-                  alt={testimonial.name}
-                />
-                <div>
-                  <p className="text-gray-900 font-semibold text-lg">{testimonial.name}</p>
-                  <p className="text-gray-500 text-sm">{testimonial.role}</p>
-                </div>
-              </div>
-            </motion.div>
+            <TestimonialCard {...testimonial} />
           </SwiperSlide>
         ))}
       </Swiper>
+  
+  <div className='mt-10'></div>
+      <Swiper
+        modules={[Pagination, Autoplay]}
+        pagination={{ clickable: true }}
+        autoplay={{ delay: 1500 }}
+        breakpoints={{
+          640: { slidesPerView: 1, spaceBetween: 20 },
+          768: { slidesPerView: 2, spaceBetween: 20 },
+          1024: { slidesPerView: 3, spaceBetween: 30 },
+        }}
+        className="px-9"
+      >
+        {Array(6).fill(testimonials[0]).map((testimonial, index) => (
+          <SwiperSlide key={index}>
+            <TestimonialCard {...testimonial} />
+          </SwiperSlide>
+        ))}
+      </Swiper>
+
+
+      
     </div>
   );
 }
