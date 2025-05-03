@@ -199,7 +199,7 @@ export default function ServicePage() {
         {/* Spacer to push content below fixed hero */}
         
         {/* Section 1: Design - z-index: 10 */}
-        <section className={`service-section sticky top-0 z-10 py-16 transition-all shadow-xl duration-700 ${activeSection >= 0 ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-20'} bg-white`}>
+        <section className={`service-section sticky top-0 z-10 py-10 transition-all  border-t border-gray-300 shadow-2xl rounded-t-[10%] duration-700 ${activeSection >= 0 ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-20'} bg-white`}>
           <div className="w-screen h-screen mx-auto px-6 pt-10 overflow-y-auto">
             <div className="flex flex-col md:flex-row">
               <div className="md:w-1/3">
@@ -249,7 +249,7 @@ export default function ServicePage() {
         </section>
         
         {/* Section 2: Technology - z-index: 20 */}
-        <section className={`service-section sticky top-0 z-20 py-16 transition-all shadow-2xl duration-700 ${activeSection >= 1 ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-20'} bg-white`}>
+        <section className={`service-section sticky top-0 z-20 py-16 transition-all  border-t border-gray-300 shadow-2xl rounded-t-[10%] duration-700 ${activeSection >= 1 ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-20'} bg-white`}>
           <div className="w-screen h-screen mx-auto px-6 py-10 overflow-y-auto">
             <div className="flex flex-col md:flex-row">
               <div className="md:w-1/3">
@@ -299,7 +299,7 @@ export default function ServicePage() {
         </section>
         
         {/* Section 3: Marketing - z-index: 30 */}
-        <section className={`service-section sticky top-0 z-30 py-16 shadow-2xl transition-all duration-700 ${activeSection >= 2 ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-20'} bg-white`}>
+        <section className={`service-section sticky top-0 z-30 py-16   border-t border-gray-300 shadow-2xl rounded-t-[10%] transition-all duration-700 ${activeSection >= 2 ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-20'} bg-white`}>
           <div className="w-screen h-screen mx-auto px-6 py-10 overflow-y-auto">
             <div className="flex flex-col md:flex-row">
               <div className="md:w-1/3">
@@ -349,7 +349,7 @@ export default function ServicePage() {
         </section>
         
         {/* Section 4: Branding - z-index: 40 */}
-        <section className={`service-section sticky top-0 z-40 py-16 transition-all shadow-2xl duration-700 ${activeSection >= 3 ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-20'} bg-white`}>
+        <section className={`service-section sticky top-0 z-40 py-16 transition-all  border-t border-gray-300 shadow-2xl rounded-t-[10%]  duration-700 ${activeSection >= 3 ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-20'} bg-white`}>
           <div className="w-screen h-screen mx-auto px-6 py-10 overflow-y-auto">
             <div className="flex flex-col md:flex-row">
               <div className="md:w-1/3">
@@ -398,8 +398,7 @@ export default function ServicePage() {
           </div>
         </section>
         
-        {/* Push content for scrolling space */}
-        <div className="h-screen"></div>
+       
       </div>
     </div>
   );
