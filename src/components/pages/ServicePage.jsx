@@ -199,7 +199,7 @@ export default function ServicePage() {
         {/* Spacer to push content below fixed hero */}
         
         {/* Section 1: Design - z-index: 10 */}
-        <section className={`service-section sticky top-0 z-10 py-10 transition-all  border-t border-gray-300 shadow-2xl rounded-t-[10%] duration-700 ${activeSection >= 0 ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-20'} bg-white`}>
+        <section className={`service-section sticky top-0 z-10 py-10 transition-all  border-t border-gray-300 shadow-2xl rounded-t-[4%] duration-700 ${activeSection >= 0 ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-20'} bg-white`}>
           <div className="w-screen h-screen mx-auto px-6 pt-10 overflow-y-auto">
             <div className="flex flex-col md:flex-row">
               <div className="md:w-1/3">
@@ -208,9 +208,7 @@ export default function ServicePage() {
               </div>
               <div className="md:w-2/3 mt-6 md:mt-0">
                 <h2 className="text-2xl font-bold mb-4">Designing Exceptional<br />Digital Experiences</h2>
-                <div className="bg-white rounded-lg p-4 mb-6">
-                  <img src={b2} alt="Design devices" className="w-[300px] h-32 object-cover rounded" />
-                </div>
+               
                 
                 <div className="space-y-4 max-h-[calc(100vh-250px)] overflow-y-auto pb-4">
                   {Object.keys(serviceDetails.design).map((item, index) => (
@@ -230,11 +228,11 @@ export default function ServicePage() {
                             <div className="md:w-1/2">
                               {serviceDetails.design[item].description}
                             </div>
-                            <div className="md:w-1/2 mt-3 md:mt-0">
+                            <div className="absolute top-70 left-20 hidden md:block lg:block">
                               <img 
                                 src={serviceDetails.design[item].image} 
                                 alt={`${item} illustration`} 
-                                className="w-full h-32 object-cover rounded shadow-md" 
+                                className="w-[300px] h-[300px] object-cover rounded shadow-md" 
                               />
                             </div>
                           </div>
@@ -249,7 +247,7 @@ export default function ServicePage() {
         </section>
         
         {/* Section 2: Technology - z-index: 20 */}
-        <section className={`service-section sticky top-0 z-20 py-16 transition-all  border-t border-gray-300 shadow-2xl rounded-t-[10%] duration-700 ${activeSection >= 1 ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-20'} bg-white`}>
+        <section className={`service-section sticky top-0 z-20 py-16 transition-all  border-t border-gray-300 shadow-2xl rounded-t-[4%] duration-700 ${activeSection >= 1 ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-20'} bg-white`}>
           <div className="w-screen h-screen mx-auto px-6 py-10 overflow-y-auto">
             <div className="flex flex-col md:flex-row">
               <div className="md:w-1/3">
@@ -258,9 +256,7 @@ export default function ServicePage() {
               </div>
               <div className="md:w-2/3 mt-6 md:mt-0">
                 <h2 className="text-2xl font-bold mb-4">Innovative Technology<br />Solutions for a Digital World</h2>
-                <div className="bg-white rounded-lg p-4 mb-6">
-                  <img src={b2} alt="AI technology" className="w-[300px] h-32 object-cover rounded" />
-                </div>
+                
                 
                 <div className="space-y-4 max-h-[calc(100vh-250px)] overflow-y-auto pb-4">
                   {Object.keys(serviceDetails.technology).map((item, index) => (
@@ -280,11 +276,11 @@ export default function ServicePage() {
                             <div className="md:w-1/2">
                               {serviceDetails.technology[item].description}
                             </div>
-                            <div className="md:w-1/2 mt-3 md:mt-0">
+                            <div className="absolute top-70 left-20 hidden md:block lg:block">
                               <img 
                                 src={serviceDetails.technology[item].image} 
                                 alt={`${item} illustration`} 
-                                className="w-full h-32 object-cover rounded shadow-md" 
+                                className="w-[300px] h-[300px] object-cover rounded shadow-md" 
                               />
                             </div>
                           </div>
@@ -299,7 +295,7 @@ export default function ServicePage() {
         </section>
         
         {/* Section 3: Marketing - z-index: 30 */}
-        <section className={`service-section sticky top-0 z-30 py-16   border-t border-gray-300 shadow-2xl rounded-t-[10%] transition-all duration-700 ${activeSection >= 2 ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-20'} bg-white`}>
+        <section className={`service-section sticky top-0 z-30 py-16   border-t border-gray-300 shadow-2xl rounded-t-[4%] transition-all duration-700 ${activeSection >= 2 ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-20'} bg-white`}>
           <div className="w-screen h-screen mx-auto px-6 py-10 overflow-y-auto">
             <div className="flex flex-col md:flex-row">
               <div className="md:w-1/3">
@@ -308,9 +304,7 @@ export default function ServicePage() {
               </div>
               <div className="md:w-2/3 mt-6 md:mt-0">
                 <h2 className="text-2xl font-bold mb-4">Strategic Digital Marketing<br />for Growth & Engagement</h2>
-                <div className="bg-white rounded-lg p-4 mb-6">
-                  <img src={b2} alt="SEO" className="w-[300px] h-32 object-cover rounded" />
-                </div>
+                
                 
                 <div className="space-y-4 max-h-[calc(100vh-250px)] overflow-y-auto pb-4">
                   {Object.keys(serviceDetails.marketing).map((item, index) => (
@@ -330,11 +324,11 @@ export default function ServicePage() {
                             <div className="md:w-1/2">
                               {serviceDetails.marketing[item].description}
                             </div>
-                            <div className="md:w-1/2 mt-3 md:mt-0">
+                            <div className="absolute top-70 left-20 hidden md:block lg:block">
                               <img 
                                 src={serviceDetails.marketing[item].image} 
                                 alt={`${item} illustration`} 
-                                className="w-full h-32 object-cover rounded shadow-md" 
+                                className="w-[300px] h-[300px] object-cover rounded shadow-md" 
                               />
                             </div>
                           </div>
@@ -349,7 +343,7 @@ export default function ServicePage() {
         </section>
         
         {/* Section 4: Branding - z-index: 40 */}
-        <section className={`service-section sticky top-0 z-40 py-16 transition-all  border-t border-gray-300 shadow-2xl rounded-t-[10%]  duration-700 ${activeSection >= 3 ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-20'} bg-white`}>
+        <section className={`service-section sticky top-0 z-40 py-16 transition-all  border-t border-gray-300 shadow-2xl rounded-t-[4%]  duration-700 ${activeSection >= 3 ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-20'} bg-white`}>
           <div className="w-screen h-screen mx-auto px-6 py-10 overflow-y-auto">
             <div className="flex flex-col md:flex-row">
               <div className="md:w-1/3">
@@ -358,9 +352,7 @@ export default function ServicePage() {
               </div>
               <div className="md:w-2/3 mt-6 md:mt-0">
                 <h2 className="text-2xl font-bold mb-4">Building Strong &<br />Memorable Brands</h2>
-                <div className="bg-white rounded-lg p-4 mb-6">
-                  <img src={b2} alt="Branding" className="w-[300px] h-32 object-cover rounded" />
-                </div>
+               
                 
                 <div className="space-y-4 max-h-[calc(100vh-250px)] overflow-y-auto pb-4">
                   {Object.keys(serviceDetails.branding).map((item, index) => (
@@ -380,11 +372,11 @@ export default function ServicePage() {
                             <div className="md:w-1/2">
                               {serviceDetails.branding[item].description}
                             </div>
-                            <div className="md:w-1/2 mt-3 md:mt-0">
+                            <div className="absolute top-70 left-20 hidden md:block lg:block">
                               <img 
                                 src={serviceDetails.branding[item].image} 
                                 alt={`${item} illustration`} 
-                                className="w-full h-32 object-cover rounded shadow-md" 
+                                className="w-[300px] h-[300px] object-cover rounded shadow-md" 
                               />
                             </div>
                           </div>
