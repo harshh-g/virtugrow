@@ -1,4 +1,5 @@
-import React, { useState, useEffect, useRef } from 'react';
+import { useEffect, useRef, useState } from 'react';
+import './PortfolioPage.css';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import comp1 from '../../assets/new portfolio/comp1.png';
@@ -11,17 +12,19 @@ import comp7 from '../../assets/new portfolio/comp7.png';
 import comp8 from '../../assets/new portfolio/comp8.png';
 import comp9 from '../../assets/new portfolio/comp9.png';
 import comp10 from '../../assets/new portfolio/comp10.png';
-import './PortfolioPage.css';
+
 import { Link } from 'react-router-dom';
 import { ArrowRight} from 'lucide-react';
-
 
 gsap.registerPlugin(ScrollTrigger);
 
 export default function PortfolioPage() {
+
   const [activeCategory, setActiveCategory] = useState("Featured Works");
   const [displayedProjects, setDisplayedProjects] = useState([]);
   const portfolioRef = useRef(null);
+
+ 
 
   const portfolioData = [
     // --- Your portfolioData (same as before) ---
@@ -125,26 +128,48 @@ export default function PortfolioPage() {
       img.addEventListener("mouseleave", () => hover.reverse());
     });
   }, [displayedProjects]);
+  
+  const [currentSlide, setCurrentSlide] = useState(0);
+ 
+  
+ 
+
+  // Handle slide changes
+  
+
+  
 
   return (
-    <div className="text-white bg-gradient-to-b from-[#002338]/90 via-[#0a0c0d] to-[#090b0d] h-full" ref={portfolioRef}>
+    <main className="h-full overflow-auto bg-black text-white">
       {/* Hero Section */}
-      <section className="text-white bg-black min-h-screen flex items-center w-full">
-        <div className="w-full md:w-[80%] mx-auto py-16 md:py-0 md:h-[40%] flex flex-col px-4 md:px-6">
-          <div className="flex flex-col md:flex-row leading-tight justify-start">
-            <p className="text-cyan-400 text-sm pt-10 pb-4 md:pb-0 md:pr-16">• Portfolio</p>
-            <h1 className="v2 text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold">
-              Creating next level<br /><span>digital products</span>
-            </h1>
+      <section className=" first-section  "> 
+          <div className="first-section-element ">
+          <div className="first-section-element2 ">
+            <div className='first-section-element3 '>
+            <div className="h-2 w-2 rounded-full bg-cyan-400 mr-3 "></div>
+              <span className="first-section-element3-text  "> Portfolio</span>
+            </div>
+            <h1 className='blog-heading '>
+            Creating next level
+            </h1>           
           </div>
-          <p className="c2 mt-6 text-base md:text-lg text-gray-300">
-            Helping businesses grow with innovative<br className="hidden md:block" />
-            solutions and strategic execution.
-          </p>
-        </div>
-      </section>
 
-      {/* Filter Categories */}
+            <div className='first-section-element3-div '>
+              <h1 className='blog-heading '>digital products</h1>
+            </div>
+          </div>
+            <div className="sub-heading-div  ">
+             <div className='sub-heading-div2 '>
+            <p className="sub-heading">Dive into our portfolio and see how we turn ideas into impact, creativity into results.</p>
+             </div>
+            </div>
+
+           
+      </section>
+      
+     
+
+
       <section className="container mx-auto px-4 mt-6">
   {/* Top hr */}
   <hr className="border-gray-700 w-full" />
@@ -176,10 +201,13 @@ export default function PortfolioPage() {
 
       {/* Portfolio Grid */}
       <section className="container mx-auto px-4  py-10 portfolio-grid">
+        
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        
           {displayedProjects.map(project => (
             <div key={project.id} className="portfolio-grid-item group relative overflow-hidden rounded-lg">
               <div className="mt-4 bg-transparent">
+              
                 <img
                   src={project.image}
                   alt={project.name}
@@ -195,8 +223,7 @@ export default function PortfolioPage() {
         </div>
       </section>
 
-      {/* CTA Section */}
-     < section className=" bg-black py-20">
+      < section className=" bg-black py-20">
       <div className='container mx-auto h-[400px] px-4  '>
       <div className="bg-gradient-to-b from-[#0F0F0F]/80 to-[#0F0F0F]/80 h-full flex flex-col justify-center items-center rounded-lg p-4 md:p-8 text-center">
       <p className="text-sm port pb-7 ">HAVE A PROJECT IN MIND?</p>
@@ -218,11 +245,10 @@ export default function PortfolioPage() {
       </div>
     
   </section>
-    </div>
+      
+
+      
+      
+    </main>
   );
 }
-
-
-
-
-

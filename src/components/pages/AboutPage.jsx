@@ -62,10 +62,10 @@ export default function AboutPage() {
             </h1>           
           </div>
             <div className='first-section-element3-div '>
-              <h1 className='blog-heading2 '>grow online with</h1>
+              <h1 className='blog-heading '>grow online with</h1>
             </div>
             <div className='first-section-element3-div '>
-              <h1 className='blog-heading3 '>smart digital work</h1>
+              <h1 className='blog-heading '>smart digital work</h1>
             </div>
           </div>
             <div className="sub-heading-div  ">

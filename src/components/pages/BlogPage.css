@@ -223,4 +223,26 @@
   }
 }
 
+.category-btn {
+  position: relative;
+  transition: color 0.3s ease;
+}
+
+.category-btn::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: -4px;
+  left: 0;
+  background: linear-gradient(90deg, #06b6d4, #3b82f6);
+  transition: width 0.3s ease;
+}
+
+.category-btn.active::after,
+.category-btn:hover::after {
+  width: 100%;
+}
+
+
 

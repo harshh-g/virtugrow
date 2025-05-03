@@ -203,10 +203,10 @@ export default function BlogPage() {
           </div>
 
             <div className='first-section-element3-div '>
-              <h1 className='blog-heading2 '>insights to grow</h1>
+              <h1 className='blog-heading '>insights to grow</h1>
             </div>
             <div className='first-section-element3-div '>
-              <h1 className='blog-heading3 '>your brand online</h1>
+              <h1 className='blog-heading '>your brand online</h1>
             </div>
           </div>
             <div className="sub-heading-div  ">

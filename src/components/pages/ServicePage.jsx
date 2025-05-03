@@ -180,10 +180,10 @@ export default function ServicePage() {
           </div>
 
             <div className='first-section-element3-div'>
-              <h1 className='blog-heading2'>Success with Design</h1>
+              <h1 className='blog-heading'>Success with Design</h1>
             </div>
             <div className='first-section-element3-div'>
-              <h1 className='blog-heading3'> Development & Marketing</h1>
+              <h1 className='blog-heading'> Development & Marketing</h1>
             </div>
           </div>
             <div className="sub-heading-div">
