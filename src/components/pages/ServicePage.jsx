@@ -116,11 +116,21 @@ export default function ServicePage() {
   
   // Toggle expanded state for service items
   const toggleExpand = (sectionId, itemName) => {
+    // Close all other items in all sections when opening a new one
     const key = `${sectionId}-${itemName}`;
-    setExpandedItems(prev => ({
-      ...prev,
-      [key]: !prev[key]
-    }));
+    
+    // Check if we're closing an item (no need to close others)
+    if (expandedItems[key]) {
+      setExpandedItems(prev => ({
+        ...prev,
+        [key]: false
+      }));
+    } else {
+      // We're opening an item, so close all others
+      const newExpandedItems = {};
+      newExpandedItems[key] = true;
+      setExpandedItems(newExpandedItems);
+    }
   };
   
   // Check if an item is expanded
@@ -132,7 +142,7 @@ export default function ServicePage() {
   useEffect(() => {
     const handleScroll = () => {
       const sections = document.querySelectorAll('.service-section');
-      const scrollPosition = window.scrollY + window.innerHeight / 2;
+      const scrollPosition = window.scrollY + window.innerHeight / 3; // Adjusted for better detection
       
       sections.forEach((section, index) => {
         if (section.offsetTop <= scrollPosition && 
@@ -143,64 +153,57 @@ export default function ServicePage() {
     };
     
     window.addEventListener('scroll', handleScroll);
+    handleScroll(); // Call once on mount to set initial section
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
+  
+  // Reset expanded items when changing sections
+  useEffect(() => {
+    setExpandedItems({});
+  }, [activeSection]);
   
   return (
     <div className="flex flex-col font-sans w-screen bg-black">
       {/* Header/Navigation */}
       
-      
       {/* Hero Section - Fixed */}
-
-
-      <section className=" first-section bg-black "> 
-          <div className="first-section-element ">
-          <div className="first-section-element2 ">
-            <div className='first-section-element3 '>
-            <div className="h-2 w-2 rounded-full bg-cyan-400 mr-3 "></div>
-              <span className="first-section-element3-text  "> Service</span>
+      <section className="first-section bg-black"> 
+          <div className="first-section-element">
+          <div className="first-section-element2">
+            <div className='first-section-element3'>
+            <div className="h-2 w-2 rounded-full bg-cyan-400 mr-3"></div>
+              <span className="first-section-element3-text"> Service</span>
             </div>
-            <h1 className='blog-heading '>
+            <h1 className='blog-heading'>
             Crafting Digital
             </h1>           
           </div>
 
-            <div className='first-section-element3-div '>
-              <h1 className='blog-heading2 '>Success with Design</h1>
+            <div className='first-section-element3-div'>
+              <h1 className='blog-heading2'>Success with Design</h1>
             </div>
-            <div className='first-section-element3-div '>
-              <h1 className='blog-heading3 '> Development & Marketing</h1>
+            <div className='first-section-element3-div'>
+              <h1 className='blog-heading3'> Development & Marketing</h1>
             </div>
           </div>
-            <div className="sub-heading-div  ">
-             <div className='sub-heading-div2 '>
+            <div className="sub-heading-div">
+             <div className='sub-heading-div2'>
             <p className="sub-heading">Helping businesses grow with innovative
             solutions and strategic execution.</p>
              </div>
             </div>
-
-        
       </section>
-
-
-
-
-
-      
       
       {/* Service Sections with increasing z-index */}
       <div className="relative">
         {/* Spacer to push content below fixed hero */}
-        <div className="h-screen"></div>
         
         {/* Section 1: Design - z-index: 10 */}
-        <section className={`service-section sticky top-0 z-10 py-16 transition-all shadow-xl duration-700 ${activeSection >= 0 ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-20'} bg-white
-]`}>
-          <div className="w-screen h-screen mx-auto px-6 pt-24">
+        <section className={`service-section sticky top-0 z-10 py-16 transition-all shadow-xl duration-700 ${activeSection >= 0 ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-20'} bg-white`}>
+          <div className="w-screen h-screen mx-auto px-6 pt-10 overflow-y-auto">
             <div className="flex flex-col md:flex-row">
               <div className="md:w-1/3">
-                <span className="text-cyan-500 text-6xl font-bold">01</span>
+                <span className="text-7xl font-bold bg-gradient-to-b from-[#2FBECE] to-[#2974B7] from-[56.52%] to-[117.39%] bg-clip-text text-transparent">01</span>
                 <p className="text-gray-500 text-sm mt-2">(Experience Design)</p>
               </div>
               <div className="md:w-2/3 mt-6 md:mt-0">
@@ -209,7 +212,7 @@ export default function ServicePage() {
                   <img src={b2} alt="Design devices" className="w-[300px] h-32 object-cover rounded" />
                 </div>
                 
-                <div className="space-y-4">
+                <div className="space-y-4 max-h-[calc(100vh-250px)] overflow-y-auto pb-4">
                   {Object.keys(serviceDetails.design).map((item, index) => (
                     <div key={index} className="border-b border-gray-200 pb-3">
                       <div 
@@ -247,10 +250,10 @@ export default function ServicePage() {
         
         {/* Section 2: Technology - z-index: 20 */}
         <section className={`service-section sticky top-0 z-20 py-16 transition-all shadow-2xl duration-700 ${activeSection >= 1 ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-20'} bg-white`}>
-          <div className="w-screen h-screen mx-auto px-6 ">
+          <div className="w-screen h-screen mx-auto px-6 py-10 overflow-y-auto">
             <div className="flex flex-col md:flex-row">
               <div className="md:w-1/3">
-                <span className="text-cyan-500 text-6xl font-bold">02</span>
+                <span className="text-7xl font-bold bg-gradient-to-b from-[#2FBECE] to-[#2974B7] from-[56.52%] to-[117.39%] bg-clip-text text-transparent">02</span>
                 <p className="text-gray-500 text-sm mt-2">(Technology)</p>
               </div>
               <div className="md:w-2/3 mt-6 md:mt-0">
@@ -259,7 +262,7 @@ export default function ServicePage() {
                   <img src={b2} alt="AI technology" className="w-[300px] h-32 object-cover rounded" />
                 </div>
                 
-                <div className="space-y-4">
+                <div className="space-y-4 max-h-[calc(100vh-250px)] overflow-y-auto pb-4">
                   {Object.keys(serviceDetails.technology).map((item, index) => (
                     <div key={index} className="border-b border-gray-200 pb-3">
                       <div 
@@ -297,10 +300,10 @@ export default function ServicePage() {
         
         {/* Section 3: Marketing - z-index: 30 */}
         <section className={`service-section sticky top-0 z-30 py-16 shadow-2xl transition-all duration-700 ${activeSection >= 2 ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-20'} bg-white`}>
-          <div className="w-screen h-screen mx-auto px-6 pt-24">
+          <div className="w-screen h-screen mx-auto px-6 py-10 overflow-y-auto">
             <div className="flex flex-col md:flex-row">
               <div className="md:w-1/3">
-                <span className="text-cyan-500 text-6xl font-bold">03</span>
+                <span className="text-7xl font-bold bg-gradient-to-b from-[#2FBECE] to-[#2974B7] from-[56.52%] to-[117.39%] bg-clip-text text-transparent">03</span>
                 <p className="text-gray-500 text-sm mt-2">(Digital Marketing)</p>
               </div>
               <div className="md:w-2/3 mt-6 md:mt-0">
@@ -309,7 +312,7 @@ export default function ServicePage() {
                   <img src={b2} alt="SEO" className="w-[300px] h-32 object-cover rounded" />
                 </div>
                 
-                <div className="space-y-4">
+                <div className="space-y-4 max-h-[calc(100vh-250px)] overflow-y-auto pb-4">
                   {Object.keys(serviceDetails.marketing).map((item, index) => (
                     <div key={index} className="border-b border-gray-200 pb-3">
                       <div 
@@ -347,10 +350,10 @@ export default function ServicePage() {
         
         {/* Section 4: Branding - z-index: 40 */}
         <section className={`service-section sticky top-0 z-40 py-16 transition-all shadow-2xl duration-700 ${activeSection >= 3 ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-20'} bg-white`}>
-          <div className="w-screen h-screen mx-auto px-6 pt-24">
+          <div className="w-screen h-screen mx-auto px-6 py-10 overflow-y-auto">
             <div className="flex flex-col md:flex-row">
               <div className="md:w-1/3">
-                <span className="text-cyan-500 text-6xl font-bold">04</span>
+                <span className="text-7xl font-bold bg-gradient-to-b from-[#2FBECE] to-[#2974B7] from-[56.52%] to-[117.39%] bg-clip-text text-transparent">04</span>
                 <p className="text-gray-500 text-sm mt-2">(Branding)</p>
               </div>
               <div className="md:w-2/3 mt-6 md:mt-0">
@@ -359,7 +362,7 @@ export default function ServicePage() {
                   <img src={b2} alt="Branding" className="w-[300px] h-32 object-cover rounded" />
                 </div>
                 
-                <div className="space-y-4">
+                <div className="space-y-4 max-h-[calc(100vh-250px)] overflow-y-auto pb-4">
                   {Object.keys(serviceDetails.branding).map((item, index) => (
                     <div key={index} className="border-b border-gray-200 pb-3">
                       <div 
@@ -398,9 +401,6 @@ export default function ServicePage() {
         {/* Push content for scrolling space */}
         <div className="h-screen"></div>
       </div>
-      
-      
-      
     </div>
   );
 }
