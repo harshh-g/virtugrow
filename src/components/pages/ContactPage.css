@@ -75,3 +75,17 @@
 
 
 
+.loader {
+  border-radius: 50%;
+  border: 2px solid white;
+  border-top-color: transparent;
+  width: 1.25rem;
+  height: 1.25rem;
+  animation: spin 0.75s linear infinite;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}

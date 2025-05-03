@@ -15,12 +15,14 @@ import SingleBlogPage4 from './components/pages/SingleBlogPage/SingleBlogPage4';
 import SingleBlogPage5 from './components/pages/SingleBlogPage/SingleBlogPage5';
 import ContactPage from './components/pages/ContactPage';
 import ScrollToTop from './ScrollToTop';
+import { ToastContainer } from 'react-toastify';
 
 const App = () => {
     
   return (<>
   <ScrollToTop/>
       <Navbar />
+    <ToastContainer position="top-right" autoClose={3000} />
     <Routes>
       <Route path="/" element={<Home />} />
       <Route path="/servicepage" element={<ServicePage />} />
