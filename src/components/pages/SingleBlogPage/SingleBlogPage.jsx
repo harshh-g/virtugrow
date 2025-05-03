@@ -1,14 +1,14 @@
 import React from "react";
 import './SingleBlogPage.css'
 import comp1 from '../../../assets/blogsrc.jpg';
-import { useNavigate } from "react-router";
+import { useNavigate ,Link } from "react-router";
 import b1 from '../../../assets/icons/blog1.png';
 import b2 from '../../../assets/icons/blog2.jpg';
 import b3 from '../../../assets/icons/blog3.jpg';
 import b4 from '../../../assets/icons/blog4.jpg';
 import b5 from '../../../assets/icons/blog5.png';
 import b6 from '../../../assets/icons/blog6.png';
-
+import { ArrowRight} from 'lucide-react';
 
 
 export default function SingleBlogPage() {
@@ -25,7 +25,7 @@ export default function SingleBlogPage() {
   ];
 
   return (
-    <div className="bg-black/90 text-white px-4 lg:mx-auto md:mx-auto w-full mx-0    font-sans">
+    <div className="bg-black/90 text-white  lg:mx-auto md:mx-auto w-full     font-sans">
       {/* Back */}
 
      <div className="w-full px-4 md:px-10 lg:px-0 lg:w-[50%] lg:mx-auto py-20 md:py-28 lg:py-44">
@@ -104,24 +104,27 @@ export default function SingleBlogPage() {
       </div>
 
 
-      <section className="container mx-auto h-[400px] px-4 py-8 ">
-    <div className="bg-gradient-to-b from-[#001a29]/80 to-[#000a14]/80 h-full flex flex-col justify-center items-center rounded-lg p-4 md:p-8 text-center">
-      <p className="port pb-7 ">HAVE A PROJECT IN MIND?</p>
-      <h2 className=" port2">LET'S WORK</h2>
-      <button className="btn px-4 md:px-6 py-2 mt-5  flex items-center mx-auto">
-        Contact Us
-        <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 12 12" fill="none" className='arrow'>
-  <g clipPath="url(#clip0_710_3134)">
-    <path d="M3.50614 2.60489C3.50617 2.39276 3.59046 2.18933 3.74046 2.03933C3.89045 1.88933 4.09389 1.80505 4.30602 1.80502L9.39719 1.80502C9.60932 1.80505 9.81275 1.88933 9.96275 2.03933C10.1128 2.18933 10.197 2.39276 10.1971 2.60489V7.69606C10.1934 7.9058 10.1075 8.10571 9.95794 8.25274C9.80833 8.39977 9.60695 8.48216 9.39719 8.48216C9.18742 8.48216 8.98605 8.39977 8.83644 8.25274C8.68683 8.10571 8.60095 7.9058 8.59731 7.69606L8.54866 4.58479L3.17465 9.95881C3.02462 10.1088 2.82114 10.1931 2.60896 10.1931C2.39679 10.1931 2.19331 10.1088 2.04328 9.95881C1.89325 9.80878 1.80896 9.60529 1.80896 9.39312C1.80896 9.18095 1.89325 8.97746 2.04328 8.82743L7.41729 3.45342L4.30602 3.40477C4.09389 3.40474 3.89045 3.32046 3.74046 3.17046C3.59046 3.02046 3.50617 2.81703 3.50614 2.60489Z" fill="white"/>
-  </g>
-  <defs>
-    <clipPath id="clip0_710_3134">
-      <rect width="12" height="12" fill="black"/>
-    </clipPath>
-  </defs>
-</svg>
-      </button>
+      < section className=" bg-black py-20 ">
+      <div className='container mx-auto h-[400px] px-4  '>
+      <div className="bg-gradient-to-b from-[#0F0F0F]/80 to-[#0F0F0F]/80 h-full flex flex-col justify-center items-center rounded-lg p-4 md:p-8 text-center">
+      <p className="text-sm port pb-7 ">HAVE A PROJECT IN MIND?</p>
+      <h2 className="text-3xl md:text-4xl lg:text-5xl xl:text-6xl port2">LET'S WORK</h2>
+      <Link to="/contactpage" className='group relative overflow-hidden flex items-center lg:mt-12 lg:px-4 lg:py-3 md:mt-12 md:px-4 md:py-3 mt-7 px-4  py-3  text-black rounded-3xl bg-[linear-gradient(182deg,_#FFF_1.76%,_rgba(255,255,255,0.8)_98.24%)] transition-all duration-500 ease-in'> 
+ 
+ {/* Background overlay that animates on hover */}
+ <span className="absolute inset-0 bg-gradient-to-b from-[#2FBECE] group-hover:border-white group-hover:border-2 group-hover:rounded-full to-[#2974B7]  from-[56.52%] to-[117.39%] transform translate-x-full group-hover:translate-x-0 transition-transform duration-300 ease z-0"></span>
+
+ {/* Button content on top of the animated background */}
+ <span className="relative z-10 flex items-center text-black group-hover:text-white transition-colors duration-300">
+   <span className="mr-3 leading-tight">Contact Us</span>
+   <span className="w-6 h-6 flex items-center justify-center bg-gradient-to-b from-[#2FBECE] to-[#2974B7] from-[56.52%] to-[117.39%] rounded-full transition-all duration-300 group-hover:bg-transparent">
+     <ArrowRight size={20} className="text-white transition-transform duration-300 ease-in-out group-hover:rotate-0 -rotate-45 font-extralight" />
+   </span>
+ </span>
+</Link>
     </div>
+      </div>
+    
   </section>
 
 
