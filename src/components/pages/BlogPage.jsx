@@ -221,61 +221,68 @@ export default function BlogPage() {
       {/* Featured Blogs Slider */}
     
      
-        <section className="py-20  h-full px-8 w-[90%] overflow-hidden mx-auto ">
-        <h2 className="text-blue-400 text-2xl mb-10">Featured Blogs</h2>
-        
-        <div className="relative overflow-hidden " ref={sliderRef}>
-          <div 
-            className="flex transition-transform duration-700 ease-out w-[100%] " 
-            style={{ 
-              width: `${blogs.length * 100}%`,
-              transform: `translateX(-${currentSlide * (100 / blogs.length)}%)`
-            }}
-          >
-            {blogs.map((blog, index) => (
-              <div 
-                key={blog.id}
-                className=""
-                style={{ flex: `0 0 ${100 / blogs.length}%` }}
+      <section className="py-16 md:py-20 h-full px-4 sm:px-6 md:px-8 w-full max-w-[90%] overflow-hidden mx-auto">
+  <h2 className="text-blue-400 text-xl sm:text-2xl md:text-3xl mb-8 md:mb-10 text-center md:text-left">
+    Featured Blogs
+  </h2>
+
+  <div className="relative overflow-hidden" ref={sliderRef}>
+    <div
+      className="flex transition-transform duration-700 ease-out"
+      style={{
+        width: `${blogs.length * 100}%`,
+        transform: `translateX(-${currentSlide * (100 / blogs.length)}%)`
+      }}
+    >
+      {blogs.map((blog, index) => (
+        <div
+          key={blog.id}
+          className="w-full m-2"
+          style={{ flex: `0 0 ${100 / blogs.length}%` }}
+        >
+          <div className="flex  md:flex-row bg-gray-900 h-auto md:h-[400px] w-full rounded-3xl overflow-hidden mx-1 sm:mx-2 flex-col-reverse ">
+            <div className="md:w-1/2 p-6 sm:p-8 flex flex-col justify-evenly ">
+              <h3 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-4 md:mb-6">
+                {blog.title}
+              </h3>
+              <p className="text-gray-400 text-xl sm:text-base mb-4 md:mb-6">
+                {blog.description}
+              </p>
+              <Link
+                to={blog.link}
+                className="inline-flex items-center text-white text-sm sm:text-base"
               >
-                <div className="flex flex-col md:flex-row bg-gray-900 h-[400px] w-[100%] rounded-3xl  overflow-hidden mx-2">
-                  <div className="md:w-1/2  p-8 flex flex-col justify-evenly">
-                    <h3 className="text-4xl font-bold mb-6">{blog.title}</h3>
-                    <p className="text-gray-400 mb-6">{blog.description}</p>
-                    <Link
-                      to={blog.link} 
-                      className="inline-flex items-center text-white"
-                    >
-                      Read Now 
-                      <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 ml-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" />
-                      </svg>
-                    </Link>
-                  </div>
-                  <div className="w-full p-3  ">
-                    <img 
-                      src={blog.image} 
-                      alt={blog.title} 
-                      className="h-full w-full object-cover rounded-2xl p-2 object-center"
-                    />
-                  </div>
-                </div>
-              </div>
-            ))}
-          </div>
-          
-             <div className="flex justify-center mt-8 space-x-2">
-            {blogs.map((_, index) => (
-              <button
-                key={index}
-                ref={el => dotsRef.current[index] = el}
-                className={`h-2 w-2 rounded-full transition-colors ${currentSlide === index ? 'bg-white' : 'bg-gray-600'}`}
-                onClick={() => goToSlide(index)}
+                Read Now
+                <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 ml-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" />
+                </svg>
+              </Link>
+            </div>
+
+            <div className="w-full md:w-1/2 p-3 ">
+              <img
+                src={blog.image}
+                alt={blog.title}
+                className="h-64 sm:h-72 md:h-full w-full object-cover rounded-2xl p-1 object-center"
               />
-            ))}
+            </div>
           </div>
         </div>
-      </section>
+      ))}
+    </div>
+
+    <div className="flex justify-center mt-6 md:mt-8 space-x-2">
+      {blogs.map((_, index) => (
+        <button
+          key={index}
+          ref={el => dotsRef.current[index] = el}
+          className={`h-2 w-2 rounded-full transition-colors ${currentSlide === index ? 'bg-white' : 'bg-gray-600'}`}
+          onClick={() => goToSlide(index)}
+        />
+      ))}
+    </div>
+  </div>
+</section>
 
 
       <section className="container mx-auto px-4 mt-6">
